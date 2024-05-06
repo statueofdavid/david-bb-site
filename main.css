@@ -1,0 +1,50 @@
+/**
+ * TOGGLERS 
+ */
+#toggleMode{
+  visibility: hidden;
+}
+
+.toggleDark,
+.toggleLight{
+  cursor: pointer;
+  position: absolute;
+  z-index: 2;
+  top: 20px;
+  left: 20px;
+}
+
+.toggleDark{
+  display: block;
+  color: #222;
+}
+
+.toggleDark:hover{
+  color: blue;
+}
+
+.toggleLight{
+  display: none;
+  color: white;
+}
+
+#toggleMode:checked ~ .toggleDark{
+  display: none;
+}
+
+#toggleMode:checked ~ .toggleLight{
+  display: block;
+}
+
+.content {
+        top: 50%; /* IMPORTANT */
+        left: 50%; /* IMPORTANT */
+        display: block;
+        position: absolute;
+        background: url(images/background.png) no-repeat center center;
+        width: 750px;
+        height: 417px;
+
+        margin-top: -208.5px; /* HALF OF THE HEIGHT */
+        margin-left: -375px; /* HALF OF THE WIDTH */
+}
