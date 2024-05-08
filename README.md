@@ -1,2 +1,3 @@
 # david-bb-site
-my latest attempt at a portfolio, an interactive site w/o js
+a clear & concise site only using css and html. 
+## Go -> https://david.declared.space
