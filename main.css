@@ -28,6 +28,8 @@
 }
 
 button {
+	height: 30px;
+	width: 72px;
 	background-color: #ffdb58;
 	box-shadow: 2px 5px #000000;
 	cursor: pointer;
@@ -41,4 +43,13 @@ button:hover {
 
 button:active {
 	box-shadow: 0px 0px;
+}
+
+.exp-btn {
+	width: 150px;
+	background-color: #C5B8E4;
+}
+
+.twt-btn {
+	width: 130px;
 }
