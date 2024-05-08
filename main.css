@@ -44,7 +44,6 @@ a {
 }
 
 .social {
-  position: fixed;
   display: flex;
   bottom: 10%;
 }
