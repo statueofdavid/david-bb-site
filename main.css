@@ -3,6 +3,10 @@
 	box-sizing: border-box;`
 }
 
+a {
+  text-decoration: none;
+}
+
 .center {
   width: 50%;
   height: 75%; 	
@@ -16,26 +20,32 @@
 	box-shadow: 5px 10px #000000;
 }
 
-button {
+.button {
 	height: 30px;
 	width: 72px;
 	background-color: #ffdb58;
+  padding: 2px 6px 2px 6px;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  border-botton: 1px solid;
+  border-left: 1px solid;
 	box-shadow: 2px 5px #000000;
 	cursor: pointer;
 }
 
-button:hover {
+.button:hover {
 	border-radius: 5px;
 	box-shadow: 1px 2px;
 }
 
 
-button:active {
+.button:active {
 	box-shadow: 0px 0px;
 }
 
 .social {
   position: fixed;
+  display: flex;
   bottom: 10%;
 }
 
