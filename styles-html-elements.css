@@ -78,11 +78,6 @@ section {
 	border-color: black; 
 	box-shadow: 5px 10px #000000;
 }
-.tagline {
-	display: flex;
-	flex: 0 0  auto;
-	flex-direction: row;
-}
 
 .shipitborder {
 	margin: 1vw;	
