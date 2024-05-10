@@ -1,0 +1,18 @@
+.poweredby {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.header-poweredby {
+  margin: 1em 0 auto 0;
+}
+
+.copyright-brand {
+  text-align: right;
+  margin: 1em 0 auto 0;
+}
