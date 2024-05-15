@@ -1,9 +1,8 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
 body {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-template-rows: auto auto auto;
   background-image: linear-gradient(
     325deg,
     hsl(43deg 72% 45%) 0%,
