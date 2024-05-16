@@ -1,6 +1,11 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
 .tagline {
+	position: absolute;
 	display: flex;
-	flex: 0 0  auto;
+	flex: 0 0 auto;
 	flex-direction: row;
+	height: 50px;
+	margin: auto;
+	border: 2px dashed white;
+	
 }

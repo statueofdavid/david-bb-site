@@ -7,6 +7,7 @@
     <meta charset="UTF-16">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles-body-component.css">
+    <link rel="stylesheet" href="styles-declaration.css">
     <link rel="stylesheet" href="styles-nav-component.css">
     <link rel="stylesheet" href="styles-button-component.css">
     <link rel="stylesheet" href="styles-tagline-component.css">
@@ -16,7 +17,7 @@
     <link rel="stylesheet" href="styles-spl-flap-display-component.css">
   </head>
     <body>
-        <section class="tagline">
+        <div class="tagline">
           <h3 class="declaration">I like to</h3>
           <div class="base-spl-flap-anim">
             <div class="posi-one">
@@ -1914,8 +1915,25 @@
               </table>  
             </div>
           </div>
-      </section>
-	    <section>
+      </div>
+      <div class="about">
+	  <h3 class="header-poweredby">About Me</h3>
+          <p>I am a human who nerds out at the intersection of naalog and digital. When I am not suffering from visions of grandeur, I am attempting to create time in my she-shed so I can spend more time with my family and friends.</p>
+	<nav>
+          <h3>View My Resume As A </h3>
+	  <a href="dvm-resume.pdf" download target="_blank" rel="noopener noreferrer" class="button button-learnmore">PDF&#128373;</a>
+	</nav>
+	</div>
+	<section class="followme">
+      		<h3 class="header-followme">Follow me</h3>
+		    <nav>
+    	    	<a href="https://github.com/statueofdavid" target="_blank" rel="noopener noreferrer" class="button button-social">github</a>
+    		  	<a href="https://linkedin.com/in/dmill" target="_blank" rel="noopener noreferrer" class="button button-social">linkedin</a>
+		  	    <a href="https://twitter.com/StatueOfDavid" target="_blank" rel="noopener noreferrer" class="button button-social">x (formerly twitter)</a>
+		    </nav>
+	    </section>
+	    </div>
+      <div class="profile">
         <img src="dvm-img.jpg" alt="an image of me, dvm">
         <div class="fire">
           <div class="fire-center">
@@ -1924,30 +1942,10 @@
           </div>
         </div>
         <h3>I am David Vincent Miller</h3>
-      </section>
-	    <section>
-        <h3>Projects</h3>
-        <a href="https://declared.space" class="button">dihklaird daht speys</a> 
-      </section>
-	    <section>
-		    <h3 class="header-poweredby">About Me</h3>
-        <p>I am a human who nerds out at the intersection of naalog and digital. When I am not suffering from visions of grandeur, I am attempting to create time in my she-shed so I can spend more time with my family and friends.</p>
-		    <nav>
-          <h3>View My Resume As A </h3>
-			    <a href="dvm-resume.pdf" download target="_blank" rel="noopener noreferrer" class="button button-learnmore">PDF&#128373;</a>
-		    </nav>
-	    <section class="followme">
-      		<h3 class="header-followme">Follow me</h3>
-		    <nav>
-    	    	<a href="https://github.com/statueofdavid" target="_blank" rel="noopener noreferrer" class="button button-social">github</a>
-    		  	<a href="https://linkedin.com/in/dmill" target="_blank" rel="noopener noreferrer" class="button button-social">linkedin</a>
-		  	    <a href="https://twitter.com/StatueOfDavid" target="_blank" rel="noopener noreferrer" class="button button-social">x (formerly twitter)</a>
-		    </nav>
-	    </section>
-	    </section>
+      </div>
       <div>
         <section>
-		        <h3 class="header-poweredby">Case Studies</h3>
+	    <h3 class="header-poweredby">Case Studies</h3>
             <ul>
               <li>AWEEOHVIHUWAL::A web soundboard/mixer for streaming</li>
               <li>BQUBD::A localized AI agent</li>
@@ -1956,22 +1954,26 @@
               <li>KAYAHS::A Game Played Between Players</li>
             </ul>
         </section>
-		    <section>
+      <section>
+        <h3>Projects</h3>
+        <a href="https://declared.space" class="button">dihklaird daht speys</a> 
+      </section>
+	<section>
             <h3>Buy me a Coffee</h3>
             <div class="tooltip">Got an idea you want to share
               <a rhef="mailto: david@declared.space" class="tooltiptext">david@declared.space</a>
             <div>
         </section>
-	    </div>
-	    <footer class="poweredby">
-		    <h3 class="header-poweredby">Powered by</h3>
-		    <nav>
-      	  <a href="https://www.nginx.com/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">NGINX</a>
-      		<a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">W3</a>
-		 	    <a href="https://digitalocean.com/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">DigitalOcean</a>
-      		<a href="https://www.eff.org/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">EFF</a>
-          <a href="https://declared.space/passion.html" class="copyright-brand">© 2024 dihklaird daht speys</a> 
-        </nav>
-	    </footer>
+      </div>
+	<footer class="poweredby">
+		<h3 class="header-poweredby">Powered by</h3>
+		<nav>
+      	  		<a href="https://www.nginx.com/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">NGINX</a>
+      			<a href="https://www.w3.org/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">W3</a>
+		 	<a href="https://digitalocean.com/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">DigitalOcean</a>
+      			<a href="https://www.eff.org/" target="_blank" rel="noopener noreferrer" class="button button-poweredby">EFF</a>
+          		<a href="https://declared.space/passion.html" class="copyright-brand">© 2024 dihklaird daht speys</a> 
+        	</nav>
+	</footer>
     </body>
 </html>
