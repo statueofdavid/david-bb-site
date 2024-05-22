@@ -1,5 +1,4 @@
 .fire {
-  z-index:-1;
   top: calc(50% - 50px);
   left: calc(50% - 50px);
   width: 100px;
@@ -7,6 +6,7 @@
   background-color: transparent;
   margin-left: auto;
   margin-right: auto;
+  align-self: flex-end;
 }
 
 .fire-center {

@@ -1,3 +1,4 @@
 .profile {
-	context-align: center;
+  display: flex;
+  flex-direction: column;
 }

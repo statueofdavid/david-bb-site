@@ -6,7 +6,7 @@
 
 table {
   border-collapse: collapse;
-  height: 40px;
+  height: auto;
 }
 
 .base-spl-flap-anim {
