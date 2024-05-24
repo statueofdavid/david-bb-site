@@ -1,6 +1,8 @@
 .followme {
   grid-area: followme;
-  margin: 0 0 0 10vh;
+  border: 2px solid #7D12FF; 
+  margin: 0 30% 0 5%;
+  padding: 1%;
 }
 
 

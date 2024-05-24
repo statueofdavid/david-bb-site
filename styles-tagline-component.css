@@ -4,5 +4,5 @@
   grid-area: tagline;
   display: flex;
   flex-direction: row;
-  border: 2px dashed white;
+  border: 2px dashed #7D12FF;
 }

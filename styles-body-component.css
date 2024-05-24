@@ -5,12 +5,10 @@ body {
   grid-template-areas:
   	'tagline tagline'
 	'about profile'
-	'career-pdf profile' 
-	'followme .' 
-	'cases .'
+	'followme profile' 
+	'cases .' 
 	'footer footer';
   grid-gap: 1em;
-  height: auto;
   max-width: 100%;
   align-items: center;
   background-image: linear-gradient(
