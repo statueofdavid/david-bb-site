@@ -1,13 +1,6 @@
 .followme {
   grid-area: followme;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  display: flex;
-  flex-flow: column nowrap;
+  margin: 0 0 0 10vh;
 }
 
-.header-followme {
-  margin: 1em 0 auto 0;
-}
 

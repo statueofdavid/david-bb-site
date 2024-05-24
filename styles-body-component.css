@@ -1,4 +1,5 @@
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
+* { box-sizing: border-box; }
+
 body {
   display: grid;
   grid-template-areas:
@@ -6,12 +7,12 @@ body {
 	'about profile'
 	'career-pdf profile' 
 	'followme .' 
-	'cases buymecoffee'
+	'cases .'
 	'footer footer';
   grid-gap: 1em;
-  margin: 1vw;
   height: auto;
-  width: auto;
+  max-width: 100%;
+  align-items: center;
   background-image: linear-gradient(
     325deg,
     hsl(43deg 72% 45%) 0%,
