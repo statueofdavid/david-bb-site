@@ -1,8 +1,18 @@
-/* https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
+* { box-sizing: border-box; }
+
 body {
-  display: flex;
-  flex-direction: row;
-  align-content: stretch;
+  display: grid;
+  grid-template-areas:
+  	'tagline tagline'
+	'about profile'
+	'career-pdf profile' 
+	'followme .' 
+	'cases .'
+	'footer footer';
+  grid-gap: 1em;
+  height: auto;
+  max-width: 100%;
+  align-items: center;
   background-image: linear-gradient(
     325deg,
     hsl(43deg 72% 45%) 0%,

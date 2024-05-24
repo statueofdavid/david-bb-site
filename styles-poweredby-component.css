@@ -1,11 +1,12 @@
 .poweredby {
-  position: fixed;
+  grid-area: footer;
   left: 0;
   bottom: 0;
   width: 100%;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  align-self: end;
 }
 
 .header-poweredby {
