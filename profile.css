@@ -1,4 +1,6 @@
 .profile {
+  height: 550px;
+  width: 400px;
 	grid-area: profile;
   border: 2px solid #7D12FF;
   margin: 0 35% 0 0;

@@ -1,5 +1,7 @@
 /* https://developer.mozilla.org/en-US/docs/Web/CSS/border-radius */
 .tagline {
+  height: 60px;
+  width: 775px;
   margin: 0 28% 0;
   grid-area: tagline;
   display: flex;

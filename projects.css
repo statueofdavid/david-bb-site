@@ -1,0 +1,8 @@
+.projects {
+  height: 200px;
+  width: 360px;
+  grid-area: projects;
+  margin: 0 50% 0 0;
+  padding: 1%;
+  border: 2px solid #7D12FF;
+}
