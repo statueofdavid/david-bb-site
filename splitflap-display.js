@@ -28,11 +28,27 @@ splitFlapElements.forEach(element => {
     console.log("mousing over");
 
     const catchPhrase = getRandomCatchPhrase();
-    console.log("Now displaying" + catchPhrase)
+    console.log('changing tagline to ' + catchPhrase)
     
     switch(catchPhrase) {
       case catchPhrases[0]:
         console.log(catchPhrase);
+        
+        splitFlapElements.forEach(value => {
+          const values = value.querySelectorAll('td');
+          console.log(values);
+            
+          values[0].parentElement.style.setProperty('--ch', '0');
+          values[0].style.animation = 'none';
+          values[0].style.animation = 'scroll 4s ease-in-out 1s forwards';
+
+          values[1].parentElement.style.setProperty('--ch', '+6');
+          values[1].style.animation = 'none';
+          values[1].style.animation = 'scroll 4s ease-in-out 1s forwards';
+            
+        });
+        console.log('now displaying ' + catchPhrase);
+
         break;
       case catchPhrases[1]:
         console.log(catchPhrase);

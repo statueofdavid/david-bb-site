@@ -145,7 +145,7 @@ table {
 }
 
 @keyframes scroll {
-   to{
+  to {
     transform: translateY(calc(var(--ch) * 100%));
   }
 }
