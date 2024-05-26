@@ -1,3 +1,9 @@
+function getRandomCatchPhrase() {
+  const randomIndex = 
+    Math.floor(Math.random() * catchPhrases.length);
+  return catchPhrases[randomIndex];
+};
+
 let catchPhrases = [
   "be a brother",
   "be a dad",
@@ -17,19 +23,47 @@ const splitFlapElements =
   console.log(splitFlapElements);
 
 splitFlapElements.forEach(element => {
-  addEventListener('mouseover', () => {
-    const catchPhrase = getRandomCatchPhrase();
-    console.log(catchPhrase);
 
-    for(let i = 0; i < catchPhrase.length; i++) {
-      const character = "?";
-      splitFlapElements.children[i].textContent = character;
+  element.addEventListener('mouseover', () => {
+    console.log("mousing over");
+
+    const catchPhrase = getRandomCatchPhrase();
+    console.log("Now displaying" + catchPhrase)
+    
+    switch(catchPhrase) {
+      case catchPhrases[0]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[1]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[2]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[3]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[4]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[5]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[6]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[7]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[8]:
+        console.log(catchPhrase);
+        break;
+      case catchPhrases[9]:
+        console.log(catchPhrase);
+        break;
+      default:
+        console.log('should never happen but nice to have.');
     }
+
   });
 });
-
-function getRandomCatchPhrase() {
-  const randomIndex = 
-    Math.floor(Math.random() * catchPhrases.length);
-  return catchPhrases[randomIndex];
-};
