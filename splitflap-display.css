@@ -32,12 +32,6 @@ table {
    box-shadow: 5px 10px #000000;
 }
 
-td:hover {
-  cursor: progress;
-   --ch:0;
-   animation: scroll 4s 1s linear forwards;
-}
-
 /* DEFAULTS */
 
 .posi-one tr {
@@ -150,9 +144,8 @@ td:hover {
    animation: scroll 4s 1s linear forwards;
 }
 
-
 @keyframes scroll {
-   to{
+  to {
     transform: translateY(calc(var(--ch) * 100%));
   }
 }
