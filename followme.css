@@ -1,10 +1,8 @@
 .followme {
   height: 200px;
-  width: 950px;
+  width: 1050px;
   grid-area: followme;
   border: 2px solid #7D12FF; 
   margin: 0 30% 0 0;
   padding: 1%;
 }
-
-
