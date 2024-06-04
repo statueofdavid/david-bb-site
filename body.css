@@ -3,11 +3,11 @@
 body {
   display: grid;
   grid-template-areas:
-  	'tagline tagline'
-	'about profile'
-	'followme profile' 
-	'cases projects' 
-	'footer footer';
+  	'tagline tagline tagline'
+	'about projects profile'
+	'followme followme profile' 
+	'. cases .' 
+	'. footer .';
   grid-gap: 1em;
   max-width: 100%;
   align-items: center;
