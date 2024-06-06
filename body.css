@@ -1,13 +1,15 @@
 * { box-sizing: border-box; }
 
+ul {list-style-type: none;}
+
 body {
+  overflow:hidden;
   display: grid;
   grid-template-areas:
   	'tagline tagline tagline'
-	'about projects profile'
+	'cases about profile'
 	'followme followme profile' 
-	'. cases .' 
-	'. footer .';
+	'footer footer .';
   grid-gap: 1em;
   max-width: 100%;
   align-items: center;
