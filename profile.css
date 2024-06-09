@@ -6,3 +6,9 @@
   margin: 0 30% 0 0;
   padding: 1%;
 }
+
+@media (max-width: 380px) {
+  .profile {
+    width: 80vw;
+  }
+}

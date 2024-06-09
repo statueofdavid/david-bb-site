@@ -7,6 +7,12 @@
   padding: 1%;
 }
 
+@media (max-width: 1925px) {
+  .about {
+    margin: 0 30% 0 20%;
+  }
+}
+
 @media (max-width: 1700px) {
   .about {  
     margin: 0;
