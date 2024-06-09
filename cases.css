@@ -4,3 +4,9 @@
   margin: 0;
   padding: 1%;
 }
+
+@media (max-width: 600px) {
+  .cases {
+    max-width: 95vw;
+  }
+}

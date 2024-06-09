@@ -8,3 +8,18 @@
   flex-direction: row;
   border: 2px dashed #7D12FF;
 }
+
+@media (max-width: 1700px) {
+  .tagline {
+    margin: 0 10% 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .tagline {
+    flex-wrap: wrap;
+    margin: 0;
+    height: auto;
+    width: 80vw;
+  }
+}
