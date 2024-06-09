@@ -6,3 +6,15 @@
   margin: 0 30% 0;
   padding: 1%;
 }
+
+@media (max-width: 1700px) {
+  .about {  
+    margin: 0;
+  }
+}
+
+@media (max-width: 400px) {
+  .about {
+    min-width: 380px;
+  }
+}

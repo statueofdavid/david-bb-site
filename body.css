@@ -43,3 +43,28 @@ body {
 		background-position: 0% 50%;
 	}
 }
+
+@media (max-width: 1700px) {
+  body {
+  overflow: scroll;	  
+  grid-template-areas:
+  	'tagline tagline'
+	'about profile'
+	'cases profile'
+	'followme followme' 
+	'footer footer'; 
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    overflow:scroll;
+    grid-template-areas:
+    	'tagline'
+	'profile'
+	'about'
+	'cases'
+	'followme'
+	'footer'
+  }
+}
