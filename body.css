@@ -46,7 +46,8 @@ body {
 
 @media (max-width: 1700px) {
   body {
-  overflow: scroll;	  
+  overflow: scroll;
+  align-items: center;  
   grid-template-areas:
   	'tagline tagline'
 	'about profile'
@@ -56,9 +57,10 @@ body {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 600px) {
   body {
     overflow:scroll;
+    align-items: center;
     grid-template-areas:
     	'tagline'
 	'profile'

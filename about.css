@@ -14,13 +14,14 @@
 }
 
 @media (max-width: 1700px) {
-  .about {  
+  .about {
+    max-width: 40vw; 
     margin: 0;
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 600px) {
   .about {
-    min-width: 380px;
+    max-width: 30vw;
   }
 }
