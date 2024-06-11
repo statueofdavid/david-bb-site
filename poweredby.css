@@ -17,3 +17,10 @@
   text-align: right;
   margin: 1em 0 auto 0;
 }
+
+
+@media (max-width: 1070px) {
+  .poweredby {
+    width: 45vw;
+  }
+}
