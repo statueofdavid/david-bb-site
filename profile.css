@@ -9,6 +9,7 @@
 
 @media (max-width: 420px) {
   .profile {
-    width: 40vw;
+    width: 175vw;
+    text-align: center;
   }
 }

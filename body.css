@@ -57,16 +57,26 @@ body {
   }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1070px) {
+  body {
+  overflow: scroll;	  
+  grid-template-areas:
+  	'tagline tagline'
+	'about profile'
+	'cases profile'
+	'followme footer'; 
+  }
+}
+
+@media (max-width: 380px) {
   body {
     overflow:scroll;
     align-items: center;
     grid-template-areas:
-    	'tagline'
-	'profile'
-	'about'
-	'cases'
-	'followme'
-	'footer'
+    	'tagline tagline'
+	'profile profile'
+	'about about'
+	'cases cases'
+	'followme footer'
   }
 }

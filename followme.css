@@ -6,3 +6,15 @@
   margin: 0 30% 0 0;
   padding: 1%;
 }
+
+@media (max-width: 1172px) {
+  .followme {
+    width: 90vw;
+  }
+}
+
+@media (max-width: 1070px) {
+  .followme {
+    width: 45vw;
+  }
+}
