@@ -18,3 +18,9 @@
     width: 45vw;
   }
 }
+
+@media (max-width: 820px) {
+  .followme {
+    width: 60vw;
+  }
+}

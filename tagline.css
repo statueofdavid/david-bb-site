@@ -9,9 +9,16 @@
   border: 2px dashed #7D12FF;
 }
 
+
 @media (max-width: 1700px) {
   .tagline {
     margin: 0 10% 0;
+  }
+}
+
+@media (max-width: 915px) {
+  .tagline {
+    margin: 0;
   }
 }
 

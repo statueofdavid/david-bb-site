@@ -7,7 +7,27 @@
   padding: 1%;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 1710px) {
+  .profile {
+    margin: 0 0 0 30%;
+  }
+}
+
+@media (max-width: 1250px) {
+  .profile {
+    margin: 0 0 0 5%;
+  }
+}
+
+@media (max-width: 950px) {
+  .profile {
+    margin: 0;
+    width: 40vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
   .profile {
     width: 175vw;
     text-align: center;

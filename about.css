@@ -25,3 +25,9 @@
     max-width: 30vw;
   }
 }
+
+@media (max-width: 500px) {
+  .about {
+    max-width: 175vw;
+  }
+}
