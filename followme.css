@@ -7,6 +7,13 @@
   padding: 1%;
 }
 
+@media (min-width: 2300px) {
+  .followme {
+    margin: 0;
+    width: 55vw;
+  }
+}
+
 @media (max-width: 1172px) {
   .followme {
     width: 90vw;
@@ -16,6 +23,7 @@
 @media (max-width: 1070px) {
   .followme {
     width: 45vw;
+    height: 33vw;
   }
 }
 

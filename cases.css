@@ -5,6 +5,13 @@
   padding: 1%;
 }
 
+@media (min-width: 2300px) {
+  .cases {
+    max-width: 75vw;
+    margin: 0 30% 0 0;
+  }
+}
+
 @media (max-width: 600px) {
   .cases {
     max-width: 175vw;

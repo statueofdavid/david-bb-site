@@ -44,6 +44,18 @@ body {
 	}
 }
 
+@media (min-width: 2300px) {
+  body {
+  overflow: scroll;
+  align-items: center;  
+  grid-template-areas:
+  	'tagline tagline'
+	'about cases'
+	'followme profile'
+	'footer footer'; 
+  }
+}
+
 @media (max-width: 1705px) {
   body {
   overflow: scroll;
