@@ -3,13 +3,13 @@
   min-width: 430px;
   grid-area: about;
   border: 2px solid #7D12FF;
-  margin: 0 30% 0;
+  margin: 0;
   padding: 1%;
 }
 
 @media (max-width: 1925px) {
   .about {
-    margin: 0 30% 0 20%;
+    margin: 0;
   }
 }
 
