@@ -1,0 +1,33 @@
+.about {
+  min-height: 315px;
+  min-width: 430px;
+  grid-area: tide;
+  border: 2px solid #7D12FF;
+  margin: 0 30% 0;
+  padding: 1%;
+}
+
+@media (max-width: 1925px) {
+  .about {
+    margin: 0 30% 0 20%;
+  }
+}
+
+@media (max-width: 1700px) {
+  .about {
+    max-width: 40vw; 
+    margin: 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .about {
+    max-width: 30vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .about {
+    max-width: 175vw;
+  }
+}

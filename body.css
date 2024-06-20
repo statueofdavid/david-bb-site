@@ -6,10 +6,10 @@ body {
   overflow:hidden;
   display: grid;
   grid-template-areas:
-  	'tagline tagline tagline'
-	'cases about profile'
-	'followme followme profile' 
-	'footer footer .';
+  	'tagline tagline . .'
+    'cases tide about profile'
+    'followme followme . .' 
+    'footer footer . .';
   grid-gap: 1em;
   max-width: 100%;
   align-items: center;
@@ -49,10 +49,10 @@ body {
   overflow: scroll;
   align-items: center;  
   grid-template-areas:
-  	'tagline tagline'
-	'about cases'
-	'followme profile'
-	'footer footer'; 
+  	'tagline tagline . .'
+	'tide cases about profile'
+	'followme followme . .'
+	'footer footer . .'; 
   }
 }
 
@@ -76,7 +76,7 @@ body {
   grid-template-areas:
   	'tagline tagline'
 	'about profile'
-	'cases profile'
+	'cases tide'
 	'followme footer'; 
   }
 }
@@ -89,7 +89,7 @@ body {
     	'tagline tagline'
 	'profile profile'
 	'about about'
-	'cases cases'
+	'cases tide'
 	'followme footer'
   }
 }
