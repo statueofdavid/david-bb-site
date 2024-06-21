@@ -1,5 +1,5 @@
 .poweredby {
-  grid-area: footer;
+  grid-area: poweredby;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -19,8 +19,8 @@
 }
 
 
-@media (max-width: 1070px) {
+@media (max-width: 500px) {
   .poweredby {
-    width: 45vw;
+    width: 60vw;
   }
 }

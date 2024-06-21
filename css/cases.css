@@ -1,0 +1,12 @@
+.cases {
+  grid-area: cases;
+  border: 2px solid #7D12FF;
+  margin: 0;
+  padding: 1%;
+}
+
+@media (max-width: 500px) {
+  .cases {
+    min-width: 170vw;
+  }
+}
