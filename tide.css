@@ -1,4 +1,4 @@
-.about {
+.tide {
   min-height: 315px;
   min-width: 430px;
   grid-area: tide;
@@ -8,26 +8,26 @@
 }
 
 @media (max-width: 1925px) {
-  .about {
+  .tide {
     margin: 0 30% 0 20%;
   }
 }
 
 @media (max-width: 1700px) {
-  .about {
+  .tide {
     max-width: 40vw; 
     margin: 0;
   }
 }
 
 @media (max-width: 600px) {
-  .about {
+  .tide {
     max-width: 30vw;
   }
 }
 
 @media (max-width: 500px) {
-  .about {
+  .tide {
     max-width: 175vw;
   }
 }

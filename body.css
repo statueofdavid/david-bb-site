@@ -6,10 +6,10 @@ body {
   overflow:hidden;
   display: grid;
   grid-template-areas:
-  	'tagline tagline . .'
+  	'tagline tagline profile .'
     'cases tide about profile'
-    'followme followme . .' 
-    'footer footer . .';
+    'followme followme profile .' 
+    'footer footer profile .';
   grid-gap: 1em;
   max-width: 100%;
   align-items: center;
@@ -49,10 +49,10 @@ body {
   overflow: scroll;
   align-items: center;  
   grid-template-areas:
-  	'tagline tagline . .'
-	'tide cases about profile'
-	'followme followme . .'
-	'footer footer . .'; 
+  	'tagline tagline profile .'
+    'cases tide about profile'
+    'followme followme profile .' 
+    'footer footer profile .';
   }
 }
 
@@ -63,7 +63,8 @@ body {
   grid-template-areas:
   	'tagline tagline'
 	'about profile'
-	'cases profile'
+	'cases profile' 
+	'tide .'
 	'followme followme' 
 	'footer footer'; 
   }
@@ -76,7 +77,8 @@ body {
   grid-template-areas:
   	'tagline tagline'
 	'about profile'
-	'cases tide'
+	'cases profile'
+	'tide .'
 	'followme footer'; 
   }
 }
@@ -87,9 +89,9 @@ body {
     align-items: center;
     grid-template-areas:
     	'tagline tagline'
-	'profile profile'
-	'about about'
-	'cases tide'
+	'about profile'
+	'cases profile'
+	'tide .'
 	'followme footer'
   }
 }

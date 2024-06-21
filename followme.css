@@ -17,13 +17,14 @@
 @media (max-width: 1172px) {
   .followme {
     width: 90vw;
+    height: 45vh;
   }
 }
 
 @media (max-width: 1070px) {
   .followme {
-    width: 45vw;
-    height: 33vh;
+    width: 60vw;
+    height: 55vh;
   }
 }
 
