@@ -42,10 +42,14 @@ body {
     justify-items: center;
     grid-template-areas:
       'tide profile tagline'
-      'about profile followme'
-      'cases profile poweredby'
+      'tide profile about'
+      'light  profile about'
+      'temperature profile followme'
+      'wind cases followme'
+      'rain cases poweredby'
+      'viz cases poweredby'
+      'pressure cases .'
       '. . .'
-
   }
 }
 
@@ -55,8 +59,13 @@ body {
     justify-items: center;
     grid-template-areas:
       'tagline tagline . .'
-      'cases profile tide .'
-      'about profile . .'
+      'cases profile light .'
+      'cases profile temperature .'
+      'cases profile wind .'
+      'about profile rain .'
+      'about profile pressure .'
+      'about profile viz .'
+      'about profile tide .'
       'followme followme followme followme'
       'poweredby poweredby poweredby poweredby'
   }
@@ -67,12 +76,13 @@ body {
     overflow: scroll;
     justify-items: start;
     grid-template-areas:
-      'tide tagline tagline temperature'
-      'tide rain viz pressure'
-      'about about profile light'
-      'cases cases profile wind'
-      'followme followme followme followme'
-      'poweredby poweredby poweredby poweredby'
+      'tide tagline tagline tagline'
+      'tide wind temperature rain'
+      'tide light viz pressure'
+      'about about profile .'
+      'cases cases profile .'
+      'followme followme followme .'
+      'poweredby poweredby poweredby .'
       '. . . .'
   }
 }
@@ -83,7 +93,12 @@ body {
     justify-items: center;
     grid-template-areas:
     	'. tagline tagline .'
-    	'. tide tide .'
+    	'. tide light .'
+    	'. tide wind .'
+    	'. tide temperature .'
+    	'. tide viz .'
+    	'. tide rain .'
+    	'. tide pressure .'
       '. about about .' 
       '. profile profile .'
       '. cases cases .'  

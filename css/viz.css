@@ -1,19 +1,18 @@
-.temperature {
-  grid-area: temperature;
+.viz {
+  grid-area: viz;
   width: 20vw;
   border: 2px solid #7D12FF;
   padding: 1%;
 }
 
 @media (max-width: 1300px) {
-  .temperature {
+  .viz {
     margin: 0 0 0 6vw;
   }
 }
 
 @media (max-width: 500px) {
-  .temperature {
+  .viz {
     min-width: 85vw;
-    max-height: 10vh;
   }
 }

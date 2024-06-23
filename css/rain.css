@@ -1,18 +1,20 @@
-.temperature {
-  grid-area: temperature;
+.rain {
+  grid-area: rain;
   width: 20vw;
   border: 2px solid #7D12FF;
   padding: 1%;
 }
 
 @media (max-width: 1300px) {
-  .temperature {
-    margin: 0 0 0 6vw;
+  .rain {
+    margin: 0 20vw 0 0;
+    min-width: 20vw;
+    max-height: 5vh;
   }
 }
 
 @media (max-width: 500px) {
-  .temperature {
+  .rain {
     min-width: 85vw;
     max-height: 10vh;
   }
