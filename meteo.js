@@ -1,6 +1,6 @@
-const url = 'https://api.open-meteo.com/v1/forecast?'
+const meteoUrl = 'https://api.open-meteo.com/v1/forecast?';
 
-const parameters = {
+const meteoParameters = {
 	latitude: '37.248096',
 	longitude: '-76.791190',
 	temperature_unit: 'fahrenheit',
@@ -12,13 +12,17 @@ const parameters = {
 	daily: 'sunrise,sunset,daylight_duration,uv_index_max,precipitation_probability_max'
 };
 
-const urlParameters = new URLSearchParams(parameters);
+const meteoUrlParameters = new URLSearchParams(meteoParameters);
 
-console.log('calling openMeteo api');
+function meteoWeatherData() {
+  console.log('calling openMeteo api');
 
-fetch(url + urlParameters)
-    .then(response => response.json())
-    .then(data => {
+  return fetch(meteoUrl + meteoUrlParameters)
+    .then((response) => {
+      return response.json();
+    })
+    .then((data) => {
+      console.log(data);
       let temp = data.current.temperature_2m;
       let tempUnits = data.current_units.temperature_2m;
 
@@ -35,25 +39,34 @@ fetch(url + urlParameters)
         burnRisk = 'extreme';
       }
       
-      console.log(`${temp}${tempUnits}, UV Index Max: ${uv} (${burnRisk})`);
+      document.querySelector('.temperature').innerHTML = 
+	`<span>${temp}${tempUnits}, UV Index Max: ${uv} (${burnRisk})</span>`;
 
-      let percipitationPredictionToday = data.daily.precipitation_probability_max[0];
-      let percipit = data.current.preciptiation;
+      let precipitationPredictionToday = data.daily.precipitation_probability_max[0];
+      let precipit = data.current.preciptiation;
       let isLikelyPercipit = false;
       let pressure = data.current.pressure_msl;
 
-      if(percipit === 1) {
+      if(precipit === 1) {
         isLikelyPercipit = true;
       }
 
       let currentHour = new Date().getHours();
+      let pressureUnits = data.current_units.pressure_msl;
 
-      let percipitationPredictionHourly = data.hourly.precipitation_probability[currentHour];
+      let precipitationPredictionHourly = data.hourly.precipitation_probability[currentHour];
       let relativeHumidity = data.hourly.relative_humidity_2m[currentHour];
       let clouds = data.hourly.cloud_cover[currentHour];
-      let viz = data.hourly.visibility[currentHour];
+      let viz = Math.floor(data.hourly.visibility[currentHour] / 5280);
       
-      console.log(`Currently Raining: ${isLikelyPercipit}`)
+      document.querySelector('.rain').innerHTML = 
+        `<span>Currently Raining: ${isLikelyPercipit}, Rain Likely: ${precipitationPredictionHourly}%</span>`;
+      
+      document.querySelector('.viz').innerHTML = 
+	`<span>Visibility: ${viz} miles, Cloud Coverage: ${clouds}%</span>`;
+      
+      document.querySelector('.pressure').innerHTML = 
+	`<span>Pressure: ${pressure} ${pressureUnits}, Humidity: ${relativeHumidity}%</span>`;
 
       const cardinalDirections = [
         "N", "NNE", "NE",
@@ -69,11 +82,19 @@ fetch(url + urlParameters)
       let speedUnits = data.current_units.wind_speed_10m;
       let windDirection = cardinalDirections[Math.floor(windDegrees / 22.5)];
 
-      console.log(`${windDirection} at ${windSpeed} ${speedUnits} gusting at ${windGusts} ${speedUnits}`);
+      document.querySelector('.wind').innerHTML = 
+        `<span>${windDirection} at ${windSpeed} ${speedUnits} gusting at ${windGusts} ${speedUnits}</span>`;
 
       let daylight = Math.floor(data.daily.daylight_duration[0] / 60 / 60);
       let sunrise = new Date(data.daily.sunrise[0]).toLocaleString("en-US", {hour: '2-digit', minute: '2-digit'});
       let sunset = new Date(data.daily.sunset[0]).toLocaleString("en-US", {hour: '2-digit', minute: '2-digit'});
         
-      console.log(`Sunrise: ${sunrise}, Sunset: ${sunset}, Daylight: ${daylight} hours`);
+      document.querySelector('.light').innerHTML =
+	`<span>Sunrise: ${sunrise}, Sunset: ${sunset}, Daylight: ${daylight} hours</span>`;
     })
+}
+      
+document.addEventListener('DOMContentLoaded', function() {
+  meteoWeatherData();
+})
+setInterval(meteoWeatherData, updateInterval);

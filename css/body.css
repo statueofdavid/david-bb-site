@@ -67,10 +67,10 @@ body {
     overflow: scroll;
     justify-items: start;
     grid-template-areas:
-      'tide tagline tagline .'
-      'tide . . .'
-      'about about profile .'
-      'cases cases profile .'
+      'tide tagline tagline temperature'
+      'tide rain viz pressure'
+      'about about profile light'
+      'cases cases profile wind'
       'followme followme followme followme'
       'poweredby poweredby poweredby poweredby'
       '. . . .'
