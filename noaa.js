@@ -35,7 +35,11 @@ function noaaTidePrediction() {
       return response.json();
     })
     .then((data) => {
-      let content = '<h3> Local Tide Predictions by NOAA for Today</h3>';
+      console.log(data);
+      let today = new Date(data.predictions[0].t).toLocaleDateString(
+	      "en-US", {year: 'numeric', month: 'long', day: 'numeric', weekday: 'long'});
+
+      let content = `<h3>${today}</h3>`;
       
       for(const tide of data.predictions) {
         let tideType = tide.type === 'H' ? 'High' : 'Low';
@@ -44,6 +48,7 @@ function noaaTidePrediction() {
         content += `<p><b>${tideType} Tide:</b> ${formattedTime}</p>`;
       }
 
+      content += '<span>provided by NOAA<span>';
       document.querySelector('.tide').innerHTML = content;
     })
 }

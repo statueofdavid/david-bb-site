@@ -1,5 +1,6 @@
 .tide {
   grid-area: tide;
+  width: 20vw;
   border: 2px solid #7D12FF;
   padding: 1%;
 }
