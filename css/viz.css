@@ -7,13 +7,11 @@
 
 @media (max-width: 1300px) {
   .viz {
-    margin: 0 0 0 6vw;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
   .viz {
-    margin: 0;
     min-width: 85vw;
   }
 }

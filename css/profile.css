@@ -10,7 +10,7 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
   .profile {
     width: 170vw;
     text-align: center;

@@ -28,7 +28,7 @@ const parameters = {
 const urlParameters = new URLSearchParams(parameters);
 
 function noaaTidePrediction() {
-  console.log('calling out noaa for tide predictions');
+  console.log('calling tides and currents noaa api');
 
   return fetch(url + '?' + urlParameters)
     .then((response) => {

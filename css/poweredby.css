@@ -1,12 +1,8 @@
 .poweredby {
   grid-area: poweredby;
-  left: 0;
-  bottom: 0;
   width: 100%;
-  display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
-  align-self: end;
 }
 
 .header-poweredby {
@@ -18,9 +14,14 @@
   margin: 1em 0 auto 0;
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 1300px) {
   .poweredby {
-    width: 60vw;
+    width: 30vw;
+  }
+}
+
+@media (max-width: 1050px) {
+  .poweredby {
+    width: 30vw;
   }
 }

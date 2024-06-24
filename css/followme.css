@@ -10,8 +10,14 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1300px) {
   .followme {
-    width: 80vw;
+    width: 30vw;
+  }
+}
+
+@media (max-width: 1050px) {
+  .followme {
+    width: 30vw;
   }
 }

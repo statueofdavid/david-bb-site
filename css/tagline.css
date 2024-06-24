@@ -15,18 +15,18 @@
 @media (max-width: 2000px) {
   .tagline {
     height: 7vh;
+    width: 65vw;
   }
 }
 
 @media (max-width: 1300px) {
   .tagline {
-    margin: 0 0 0 5vw;
-    width: 130vh;
-    height: 10vh;
+    width: 65vh;
+    height: 7vh;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
   .tagline {
     text-align: center;
     flex-wrap: wrap;

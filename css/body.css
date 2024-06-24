@@ -41,14 +41,13 @@ body {
     justify-items: center;
     grid-gap: 5px;
     grid-template-areas:
-      'tide profile tagline'
-      'tide profile about'
-      'light  profile about'
-      'temperature profile followme'
-      'wind cases followme'
-      'rain cases poweredby'
-      'viz cases poweredby'
-      'pressure cases .'
+      'tagline profile tide'
+      'about profile light'
+      'about profile temperature'
+      'followme profile wind'
+      'followme cases rain'
+      'poweredby cases pressure'
+      'poweredby cases viz'
       '. . .'
   }
 }
@@ -56,14 +55,13 @@ body {
 @media (max-width: 2000px) {
   body {
     overflow: hidden;
-    justify-items: center;
-    grid-gap: 5px;
+    justify-items: start;
+    grid-gap: 3px;
     grid-template-areas:
-      'tagline tagline . .'
-      'cases profile light .'
+      'tagline tagline light .'
       'cases profile temperature .'
       'cases profile wind .'
-      'about profile rain .'
+      'cases profile rain .'
       'about profile pressure .'
       'about profile viz .'
       'about profile tide .'
@@ -78,18 +76,18 @@ body {
     justify-items: start;
     grid-gap: 1px;
     grid-template-areas:
-      'tide tagline tagline tagline'
-      'tide wind temperature rain'
-      'tide light viz pressure'
-      'about about profile .'
-      'cases cases profile .'
-      'followme followme followme .'
-      'poweredby poweredby poweredby .'
-      '. . . .'
+      'tagline tagline light' 
+      'about profile temperature'
+      'about profile wind'
+      'about profile rain'
+      'about profile pressure'
+      'about profile viz'
+      'cases profile tide'
+      'followme poweredby .'
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1050px) {
   body {
     overflow:scroll;
     justify-items: center;
