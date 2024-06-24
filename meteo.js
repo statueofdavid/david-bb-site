@@ -31,9 +31,9 @@ function meteoWeatherData() {
 
       if(uv < 3) {
         burnRisk = 'low';
-      } else if(uv > 3 && uv < 6) {
+      } else if(uv >= 3 && uv < 6) {
         burnRisk = 'moderate';
-      } else if(uv > 6 && uv < 9) {
+      } else if(uv >= 6 && uv < 9) {
         burnRisk = 'high';
       } else {
         burnRisk = 'extreme';
