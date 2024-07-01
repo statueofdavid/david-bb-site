@@ -47,7 +47,7 @@ function meteoWeatherData() {
       let isLikelyPercipit = false;
       let pressure = data.current.pressure_msl;
 
-      if(precipit === 1) {
+      if(precipit > 0) {
         isLikelyPercipit = true;
       }
 
