@@ -41,14 +41,12 @@ body {
     justify-items: center;
     grid-gap: 5px;
     grid-template-areas:
-      'tagline profile tide'
-      'about profile light'
-      'about profile temperature'
-      'followme profile wind'
-      'followme cases rain'
-      'poweredby cases pressure'
-      'poweredby cases viz'
-      '. . .'
+      'tagline profile'
+      'about profile'
+      'cases .'
+      'followme .'
+      'poweredby .'
+      '. .'
   }
 }
 
@@ -58,15 +56,15 @@ body {
     justify-items: start;
     grid-gap: 3px;
     grid-template-areas:
-      'tagline tagline light .'
-      'cases profile temperature .'
-      'cases profile wind .'
-      'cases profile rain .'
-      'about profile pressure .'
-      'about profile viz .'
-      'about profile tide .'
-      'followme followme followme followme'
-      'poweredby poweredby poweredby poweredby'
+      'tagline tagline'
+      'cases profile'
+      'cases profile'
+      'cases profile'
+      'about profile'
+      'about profile'
+      'about profile'
+      'followme followme'
+      'poweredby poweredby'
   }
 }
 
@@ -76,14 +74,14 @@ body {
     justify-items: start;
     grid-gap: 1px;
     grid-template-areas:
-      'tagline tagline light' 
-      'about profile temperature'
-      'about profile wind'
-      'about profile rain'
-      'about profile pressure'
-      'about profile viz'
-      'cases profile tide'
-      'followme poweredby .'
+      'tagline tagline' 
+      'about profile'
+      'about profile'
+      'about profile'
+      'about profile'
+      'about profile'
+      'cases profile'
+      'followme poweredby'
   }
 }
 
@@ -93,17 +91,10 @@ body {
     justify-items: center;
     grid-gap: 5px;
     grid-template-areas:
-    	'. tagline tagline .'
-    	'. tide light .'
-    	'. tide wind .'
-    	'. tide temperature .'
-    	'. tide viz .'
-    	'. tide rain .'
-    	'. tide pressure .'
-      '. about about .' 
-      '. profile profile .'
-      '. cases cases .'  
-      '. followme poweredby .';
+    	'tagline tagline'
+      'about profile' 
+      'cases profile'  
+      'followme poweredby';
     background-size: 2000% 4000%;
   }
 }
