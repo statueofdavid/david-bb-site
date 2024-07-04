@@ -6,7 +6,7 @@
 
 @media (min-width: 2001px) {
   .about {
-    height: 35vh;
+    height: 25vh;
     width: 30vw;
   }
 }
@@ -19,12 +19,19 @@
 
 @media (max-width: 1300px) {
   .about {
-    width: 35vw;
+    width: 45vw;
   }
 }
 
 @media (max-width: 1050px) {
   .about {
-    width: 170vw;
+    width: 60vw;
   }
 }
+
+@media (max-width: 500px) {
+  .about {
+    width: 95vw;
+  }
+}
+

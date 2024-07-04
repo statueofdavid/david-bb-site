@@ -7,7 +7,7 @@
 
 @media (min-width: 2001px) {
   .cases {
-    height: 35vh;
+    height: 25vh;
     width: 30vw;
   }
 }
@@ -20,12 +20,18 @@
 
 @media (max-width: 1300px) {
   .cases {
-    width: 35vw;
+    width: 45vw;
   }
 }
 
 @media (max-width: 1050px) {
   .cases {
-    min-width: 170vw;
+    min-width: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .cases {
+    min-width: 95vw;
   }
 }
