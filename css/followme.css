@@ -6,18 +6,25 @@
 
 @media (min-width: 2001px) {
   .followme {
-    height: 25vh;
+    width: 60vw;
+    height: 15vh;
   }
 }
 
 @media (max-width: 1300px) {
   .followme {
-    width: 30vw;
+    width: 45vw;
   }
 }
 
 @media (max-width: 1050px) {
   .followme {
-    width: 30vw;
+    width: 60vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .followme {
+    min-width: 95vw;
   }
 }

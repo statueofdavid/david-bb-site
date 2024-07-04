@@ -6,13 +6,36 @@
 
 @media (min-width: 2001px) {
   .profile {
-    height: 65vh;
+    text-align: center;
+    height: 40vh;
+    width: 35vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .profile {
+    width: 50vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .profile {
+    width: 50vw;
+    text-align: center;
   }
 }
 
 @media (max-width: 1050px) {
   .profile {
-    width: 170vw;
+    width: 45vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile {
+    width: 95vw;
     text-align: center;
   }
 }

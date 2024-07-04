@@ -1,5 +1,28 @@
-* { box-sizing: border-box; }
-
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 ul {list-style-type: none;}
 
 body {
@@ -41,11 +64,11 @@ body {
     justify-items: center;
     grid-gap: 5px;
     grid-template-areas:
-      'tagline profile'
+      'tagline tagline'
       'about profile'
-      'cases .'
-      'followme .'
-      'poweredby .'
+      'cases profile'
+      'cases followme'
+      '. poweredby'
       '. .'
   }
 }
@@ -57,12 +80,12 @@ body {
     grid-gap: 3px;
     grid-template-areas:
       'tagline tagline'
-      'cases profile'
-      'cases profile'
-      'cases profile'
       'about profile'
       'about profile'
       'about profile'
+      'cases profile'
+      'cases profile'
+      'cases profile'
       'followme followme'
       'poweredby poweredby'
   }
@@ -79,7 +102,7 @@ body {
       'about profile'
       'about profile'
       'about profile'
-      'about profile'
+      'cases profile'
       'cases profile'
       'followme poweredby'
   }
@@ -88,7 +111,7 @@ body {
 @media (max-width: 1050px) {
   body {
     overflow:scroll;
-    justify-items: center;
+    justify-items: left;
     grid-gap: 5px;
     grid-template-areas:
     	'tagline tagline'
@@ -96,5 +119,20 @@ body {
       'cases profile'  
       'followme poweredby';
     background-size: 2000% 4000%;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    overflow:scroll;
+    justify-items: left;
+    grid-gap: 1px;
+    grid-template-areas:
+      'tagline'
+      'profile'
+      'about'
+      'cases'
+      'followme'
+      'poweredby';
   }
 }
