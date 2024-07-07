@@ -1,0 +1,29 @@
+.modal-content {
+  padding: 20px;  /* Add padding to the content container */
+}
+
+#modal {
+  height: 50vh;
+  width: 50vw;
+  position: fixed;
+  top: 0;  /* Set to 0 to occupy full viewport height */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;  /* Remove padding from modal itself */
+  border-radius: 5px;  /* Rounded corners for content */
+  animation: modal-show 0.5s ease-in-out forwards;
+}
+
+@keyframes modal-show {
+  from { opacity: 0; transform: translateY(-20px); }  /* Starts invisible and slightly shifted up */
+  to { opacity: 1; transform: translateY(0); }  /* Animates to full opacity and original position */
+}
+
+#modal.hidden {  /* Optional class for hidden state */
+  animation: modal-hide 0.3s ease-in-out forwards;  /* Animation for hiding the modal */
+}
+
+@keyframes modal-hide {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }  /* Animates to invisible and slightly shifted down */
+}
