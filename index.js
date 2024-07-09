@@ -1,26 +1,53 @@
-const modal = document.getElementById("modal");
-const modalHeader = document.getElementById("modal-header");
-const modalText = document.getElementById("modal-text");
+
+
+const header = document.querySelector('header');
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menuContent = document.querySelector('.menu-content');
+
+hamburgerMenu.addEventListener('click', () => {
+  let invisible = getComputedStyle(menuContent).display;
+  console.log(invisible)
+
+  const modalHeader = document.getElementById("modal-header");
+  const modalText = document.getElementById("modal-text");
+  
+  if (invisible) {
+    menuContent.classList.toggle('show');  // Toggle 'show' class for visibility
+  } else {
+    menuContent.classList.toggle('none');
+  }
+});
+
+const footer = document.querySelector('footer');
 
 const greyMatterPath = document.getElementById("grey-matter");
 const greyMatterSvg = greyMatterPath.getAttribute('d');
 console.log(`SVG d string: ${greyMatterSvg}`);
 
 greyMatterPath.addEventListener("click", function() {
-  console.log("clicked");
+  console.log("clicked"); 
   showModal();
 });
+
+const modal = document.getElementById("modal");
+const modalHeader = document.getElementById("modal-header");
+const modalText = document.getElementById("modal-text");
 
 function showModal() {
   modalHeader.innerHTML = `This is my Brain on the Internet`;
   modalText.innerHTML += `You clicked!`;
   modal.style.display = "block"; 
+  header.style.display = 'none';
+  footer.style.display = 'none';
 }
 
 // Function to close the modal when the button is clicked
 function closeModal() {
   modal.style.display = "none"; // Hide modal
   modalText.innerHTML = "";
+  
+  header.style.display = 'block';
+  footer.style.display = 'block';
 }
 
 /* Some Typed Thoughts for the brain's behavior 
