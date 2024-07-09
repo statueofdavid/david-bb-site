@@ -3,8 +3,8 @@
 }
 
 #modal {
-  height: 50vh;
-  width: 50vw;
+  height: 80vh;
+  width: 80vw;
   position: fixed;
   top: 0;  /* Set to 0 to occupy full viewport height */
   left: 0;
