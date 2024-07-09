@@ -14,7 +14,7 @@ main {
 
 header, footer {
   background-color: #f0f0f0;
-  color: #fff;
+  color: black;
   padding: 10px;
   text-align: center;
 }
@@ -25,12 +25,16 @@ header, main, footer {
 
 /* START: all styling in header */
 header {
+  position: relative;
   grid-area: header;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .hamburger-menu {
-  position: relative;  /* Allow absolute positioning for menu content */
-  display: flex;  /* Align icon and menu content horizontally */
+  position: relative; 
+  display: flex;  
   align-items: center;  /* Center icon vertically */
   cursor: pointer;  /* Change cursor on hover for interaction cue */
 }
@@ -51,13 +55,17 @@ header {
 }
 
 .menu-content {
-  display: none;  /* Initially hide the menu content */
-  position: absolute;  /* Positioned relative to the hamburger menu */
-  top: 100%;  /* Place below the hamburger menu */
-  left: 0;
+  background-color: inherit;
+  position: absolute;
+  display: flex;
+  flex-direction: row-reverse;
+  z-index: 1;
   background-color: white;
   width: 100%;  /* Make it full width */
   padding: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .menu-content a {
@@ -67,7 +75,7 @@ header {
   padding: 5px;
 }
 
-/* START: all styling in header */
+/* END: all styling in header */
 
 main {
   grid-area: main;
