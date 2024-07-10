@@ -29,15 +29,41 @@ const modal = document.getElementById("modal");
 const modalHeader = document.getElementById("modal-header");
 const modalText = document.getElementById("modal-text");
 
+// Adjusts the brain size as viewport is adjusted
+function centerSVG() {
+  const svgWidth = greyMatterPath.clientWidth;
+  const svgHeight = greyMatterPath.clientHeight;
+
+  const viewportWidth = window.innerWidth;
+  const viewportHeight = window.innerHeight;
+
+  const svgCenterX = svgWidth / 2;
+  const svgCenterY = svgHeight / 2;
+  const viewportCenterX = viewportWidth / 2;
+  const viewportCenterY = viewportHeight / 2;
+
+  greyMatterPath.style.position = "absolute"; // Make sure SVG is positioned
+  greyMatterPath.style.top = `${viewportCenterY - svgCenterY}px`;
+  greyMatterPath.style.left = `${viewportCenterX - svgCenterX}px`;
+};
+
+// Call the function once initially to center the SVG on page load
+window.addEventListener("load", centerSVG);
+window.addEventListener("resize", centerSVG);
+
 // Hamburger Menu Behavior
 console.log(`MenuToggle: ${menuToggle}`);
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
   if (menuContent.style.visibility == 'hidden') {
     menuContent.style.visibility = 'visible'; 
+    menuContent.style.opacity = 1;
+    hamburgerMenu.style.visibility = 'visible';
+    hamburgerMenu.style.opacity = 1;
     console.log(menuContent.style.visibility);
   } else {
     menuContent.style.visibility = 'hidden';
+    menuContent.style.opacity = 0;
     console.log(menuContent.style.visibility);
   }
 });
