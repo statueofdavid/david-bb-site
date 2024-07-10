@@ -1,3 +1,8 @@
+svg {
+  width: 100vw;
+  height: 100vh;
+}
+
 body {
   display: grid;
   grid-template-areas:
@@ -13,6 +18,7 @@ main {
 }
 
 header, footer {
+  width: 82vw;
   background-color: #f0f0f0;
   color: black;
   padding: 10px;
@@ -32,11 +38,48 @@ header {
   align-items: center;
 }
 
-.hamburger-menu {
+.menu-toggle {
   position: relative; 
-  display: flex;  
-  align-items: center;  /* Center icon vertically */
-  cursor: pointer;  /* Change cursor on hover for interaction cue */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 40px;
+  width: 40px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle.active .bar.top {
+  transform: rotate(45deg) translate(7px, -7px);
+}
+
+.menu-toggle.active .bar.middle {
+  opacity: 0;
+}
+
+.menu-toggle.active .bar.bottom {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.menu-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Full viewport height */
+  background-color: white; /* Adjust background color */
+  padding: 20px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.menu-toggle.active .menu-content {
+  opacity: 1;
+  visibility: visible;
 }
 
 .hamburger-icon {
@@ -59,7 +102,7 @@ header {
   position: absolute;
   display: flex;
   flex-direction: row-reverse;
-  z-index: 1;
+  z-index: 2;
   background-color: white;
   width: 100%;  /* Make it full width */
   padding: 10px;

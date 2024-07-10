@@ -22,7 +22,7 @@ const greyMatterPath = document.getElementById("grey-matter");
 const greyMatterSvg = greyMatterPath.getAttribute('d');
 
 const header = document.querySelector('header');
-const hamburgerMenu = document.querySelector('.hamburger-menu');
+const menuToggle = document.querySelector('.menu-toggle');
 const menuContent = document.querySelector('.menu-content');
 
 const modal = document.getElementById("modal");
@@ -30,8 +30,9 @@ const modalHeader = document.getElementById("modal-header");
 const modalText = document.getElementById("modal-text");
 
 // Hamburger Menu Behavior
-console.log(`MenuContent: ${menuContent}`);
-hamburgerMenu.addEventListener('click', () => {
+console.log(`MenuToggle: ${menuToggle}`);
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
   if (menuContent.style.visibility == 'hidden') {
     menuContent.style.visibility = 'visible'; 
     console.log(menuContent.style.visibility);
