@@ -21,8 +21,12 @@ const greyMatterPath = document.getElementById('grey-matter');
 const greyMatterSvg = greyMatterPath.getAttribute('d');
 
 const header = document.querySelector('header');
-const menuToggle = document.querySelector('.menu-toggle');
-const menuContent = document.querySelector('.menu-content');
+
+const hamburgerMenu = document.querySelector('.hamburger-menu');
+const headerNavigationMenu = document.querySelector('.header-menu');
+
+const followerMenu = document.querySelector('.follow-me');
+const footerNavigationMenu = document.querySelector('.footer-menu');
 
 const modal = document.getElementById('modal');
 const modalHeader = document.getElementById('modal-header');
@@ -50,23 +54,13 @@ function centerSVG() {
 window.addEventListener("load", centerSVG);
 window.addEventListener("resize", centerSVG);
 
-// Hamburger Menu Behavior
-menuToggle.addEventListener('click', () => {
-  console.log(`MenuToggle: ${menuToggle}, ${menuToggle.style.visibility}, 
-    MenuContent: ${menuContent}, ${menuContent.style.visibility}`);
-  if(menuToggle.classList.contains('active')) {
-    menuToggle.classList.toggle('active');
-    menuContent.style.visibility = 'hidden';
-    menuContent.style.opacity = 0;
-    menuContent.style.display = 'none';
-    console.log('should be hidden');
-  } else {
-    menuToggle.classList.toggle('active');
-    menuContent.style.visibility = 'visible';
-    menuContent.style.opacity = 1;
-    menuContent.style.display = 'flex';
-    console.log('should be visible');
-  }
+//Menu Behavior
+hamburgerMenu.addEventListener('click', () => {
+  headerNavigationMenu.classList.toggle('active');
+});
+
+followerMenu.addEventListener('click', () => {
+  footerNavigationMenu.classList.toggle('active');
 });
 
 // Brain Outline Behavior
