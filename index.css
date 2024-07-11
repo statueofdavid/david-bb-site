@@ -1,0 +1,244 @@
+svg {
+  width: 150vw;
+  height: 150vh;
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+  "header"
+  "main"
+  "footer";
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  top: 0; /* Stick to top of viewport */
+  grid-area: header;
+  font-size: 36px;
+}
+
+main {
+  flex: 1;
+  grid-area: main;
+}
+
+
+footer {
+  bottom: 0; /* Stick to bottom of viewport */
+  grid-area: footer;
+  font-size: 18px;
+}
+
+header, footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: 95vw;
+  height: 5vh;
+  padding: 2rem 3rem;
+  text-align: center;
+  color: black;
+}
+
+header, main, footer {
+  grid-area: auto;  /* Initially set all to auto for clarity */
+}
+
+.hamburger-menu {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 30px;
+  z-index: 11; /* Ensure menu icon is above header text */
+}
+
+.bar {
+  width: 100%;
+  height: 3px;
+  margin-bottom: 5px;  /* Add spacing between lines */
+  background-color: black;
+}
+
+.hamburger-menu.active {
+  /* Existing styles... */
+  /* Add a transform animation (optional) */
+  transform: rotate(90deg); /* Example rotation animation */
+  transition: transform 0.3s ease-in-out; /* Animation duration and timing */
+}
+
+
+/* START: all styling in header, footer */
+
+.header-menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hidden off-screen */
+  width: calc(100vw - 30px);
+  opacity: 0;
+  background-color: transparent;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 9; /* Ensure menu is below header but above content */
+}
+
+.header-menu.active {
+  top: 0; /* Slide in from left on activation */
+  right: -40vw;
+  opacity: 1;
+}
+
+.header-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.header-menu li {
+  padding: 1rem 2rem;
+}
+
+.header-menu a {
+  text-decoration: none;
+  color: black;
+
+  &:hover {
+    color: #7f65d6;
+
+    &::after {
+      content: ""; /* Empty content for underline */
+      position: absolute; /* Position relative to anchor */
+      bottom: -2px; /* Adjust underline position from bottom */
+      left: 0; /* Align with left edge of text */
+      width: 0; /* Initial width (no underline) */
+      height: 2px; /* Underline height */
+      background-color: #c49520; /* Underline color (matches hover color) */
+      transition: width 0.3s ease-in-out; /* Animation duration and timing */
+      animation: underline-hover 0.3s ease-in-out forwards; /* Trigger animation on hover */
+    }
+  }
+
+
+}
+
+/* END: elements in header,footer */
+.footer-menu {
+  position: fixed;
+  bottom: 0;
+  left: 100%; /* Initially hidden off-screen */
+  width: calc(100vw - 30px);
+  height: 10vh;
+  opacity: 0;
+  background-color: transparent;
+  transition: opacity 0.7s ease-in-out;
+  z-index: 9; /* Ensure menu is below header but above content */
+}
+
+.footer-menu.active {
+  bottom: 0; /* Slide in from left on activation */
+  opacity: 1;
+  left: 15vw;
+}
+
+.footer-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.footer-menu li {
+  padding: 1rem 2rem;
+}
+
+.footer-menu a {
+  text-decoration: none;
+  color: black;
+  
+  &:hover {
+    color: #c49520;
+    background-color: #7f65d6 ;
+  }
+}
+
+.follow-me-menu {
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 11;
+}
+
+
+.modal-content {
+  padding: 20px;
+}
+
+#modal {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 0;
+  animation: modal-show 0.5s ease-in-out forwards;
+}
+
+@keyframes modal-show {
+  from { opacity: 0; transform: translateY(-20px); }  /* Starts invisible and slightly shifted up */
+  to { opacity: 1; transform: translateY(0); }  /* Animates to full opacity and original position */
+}
+
+#modal.hidden {  /* Optional class for hidden state */
+  animation: modal-hide 0.3s ease-in-out forwards;  /* Animation for hiding the modal */
+}
+
+@keyframes modal-hide {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(20px); }  /* Animates to invisible and slightly shifted down */
+}
+
+@keyframes underline-hover {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@media screen and (max-width: 1500px) {
+.header-menu.active {
+  top: 0; /* Slide in from left on activation */
+  right: -20vw;
+  opacity: 1;
+  }
+.footer-menu.active {
+  bottom: 0; /* Slide in from left on activation */
+  opacity: 1;
+  left: 25vw;
+}
+
+}
+@media screen and (max-width: 768px) {
+  
+  .hamburger-menu {
+    display: none; /* This rule might be hiding the menu */
+  }
+
+  .header-menu {
+    /* Existing styles... */
+    width: 100%; /* Set full width for column layout */
+    flex-direction: column; /* Arrange links vertically */
+    /* Adjust padding and margins for better spacing (optional) */
+  }
+
+  .header-menu ul {
+    flex-wrap: unset; /* Don't wrap links on smaller screens */
+  }
+}
