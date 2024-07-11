@@ -1,4 +1,3 @@
-
 /* Some Typed Thoughts for the brain's behavior 
  * 1. It will have brain sections 
  * 2. If user's cursor IS NOT on over the Grey Matter 
@@ -55,15 +54,14 @@ window.addEventListener("resize", centerSVG);
 console.log(`MenuToggle: ${menuToggle}`);
 menuToggle.addEventListener('click', () => {
   menuToggle.classList.toggle('active');
-  if (menuContent.style.visibility == 'hidden') {
-    menuContent.style.visibility = 'visible'; 
-    menuContent.style.opacity = 1;
-    hamburgerMenu.style.visibility = 'visible';
-    hamburgerMenu.style.opacity = 1;
+  if (menuToggle.style.visibility == 'visible') {
+    menuContent.style.visibility = 'hidden'; 
+    menuContent.style.opacity = 0;
     console.log(menuContent.style.visibility);
   } else {
-    menuContent.style.visibility = 'hidden';
-    menuContent.style.opacity = 0;
+    menuContent.style.visibility = 'visible';
+    menuContent.style.opacity = 1;
+    menuToggle.classList.toggle('active');
     console.log(menuContent.style.visibility);
   }
 });
@@ -80,16 +78,12 @@ greyMatterPath.addEventListener("click", function() {
 function showModal() {
   modalHeader.innerHTML = `This is my Brain on the Internet`;
   modalText.innerHTML += `You clicked!`;
-  modal.style.display = "block"; 
-  header.style.display = 'none';
-  footer.style.display = 'none';
+  modal.style.display = "block";
+  modal.style.zIndex = 1;
 }
 
 // removes the modal
 function closeModal() {
   modal.style.display = "none"; // Hide modal
   modalText.innerHTML = "";
-  
-  header.style.display = 'block';
-  footer.style.display = 'block';
 }
