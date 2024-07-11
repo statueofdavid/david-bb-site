@@ -17,15 +17,15 @@
  **/
 
 const footer = document.querySelector('footer');
-const greyMatterPath = document.getElementById("grey-matter");
+const greyMatterPath = document.getElementById('grey-matter');
 const greyMatterSvg = greyMatterPath.getAttribute('d');
 
 const header = document.querySelector('header');
 const menuToggle = document.querySelector('.menu-toggle');
 const menuContent = document.querySelector('.menu-content');
 
-const modal = document.getElementById("modal");
-const modalHeader = document.getElementById("modal-header");
+const modal = document.getElementById('modal');
+const modalHeader = document.getElementById('modal-header');
 const modalText = document.getElementById("modal-text");
 
 // Adjusts the brain size as viewport is adjusted
@@ -51,25 +51,28 @@ window.addEventListener("load", centerSVG);
 window.addEventListener("resize", centerSVG);
 
 // Hamburger Menu Behavior
-console.log(`MenuToggle: ${menuToggle}`);
 menuToggle.addEventListener('click', () => {
-  menuToggle.classList.toggle('active');
-  if (menuToggle.style.visibility == 'visible') {
-    menuContent.style.visibility = 'hidden'; 
+  console.log(`MenuToggle: ${menuToggle}, ${menuToggle.style.visibility}, 
+    MenuContent: ${menuContent}, ${menuContent.style.visibility}`);
+  if(menuToggle.classList.contains('active')) {
+    menuToggle.classList.toggle('active');
+    menuContent.style.visibility = 'hidden';
     menuContent.style.opacity = 0;
-    console.log(menuContent.style.visibility);
+    menuContent.style.display = 'none';
+    console.log('should be hidden');
   } else {
+    menuToggle.classList.toggle('active');
     menuContent.style.visibility = 'visible';
     menuContent.style.opacity = 1;
-    menuToggle.classList.toggle('active');
-    console.log(menuContent.style.visibility);
+    menuContent.style.display = 'flex';
+    console.log('should be visible');
   }
 });
 
 // Brain Outline Behavior
-console.log(`SVG d string: ${greyMatterSvg}`);
 greyMatterPath.addEventListener("click", function() {
   console.log("clicked"); 
+  console.log(`SVG d string: ${greyMatterSvg}`);
   showModal();
 });
 
