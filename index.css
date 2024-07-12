@@ -52,6 +52,12 @@ header, main, footer {
   grid-area: auto;  /* Initially set all to auto for clarity */
 }
 
+.vanity:hover {
+  background-color: #c49520; /* Underline color (matches hover color) */
+  transition: width 0.3s ease-in-out; /* Animation duration and timing */
+  animation: underline-hover 0.7s ease-in-out forwards; /* Trigger animation on hover */
+}
+
 .hamburger-menu {
   background: none;
   border: none;
@@ -78,7 +84,6 @@ header, main, footer {
   transform: rotate(90deg); /* Example rotation animation */
   transition: transform 0.3s ease-in-out; /* Animation duration and timing */
 }
-
 
 /* START: all styling in header, footer */
 
@@ -109,28 +114,18 @@ header, main, footer {
 
 .header-menu li {
   padding: 1rem 2rem;
+
+  &:hover {
+    color: #7f65d6;
+    background-color: #c49520; /* Underline color (matches hover color) */
+    transition: width 0.3s ease-in-out; /* Animation duration and timing */
+    animation: underline-hover 0.7s ease-in-out forwards; /* Trigger animation on hover */
+  }
 }
 
 .header-menu a {
   text-decoration: none;
   color: black;
-
-  &:hover {
-    color: #7f65d6;
-
-    &::after {
-      content: ""; /* Empty content for underline */
-      position: absolute; /* Position relative to anchor */
-      bottom: -2px; /* Adjust underline position from bottom */
-      left: 0; /* Align with left edge of text */
-      width: 0; /* Initial width (no underline) */
-      height: 2px; /* Underline height */
-      background-color: #c49520; /* Underline color (matches hover color) */
-      transition: width 0.3s ease-in-out; /* Animation duration and timing */
-      animation: underline-hover 0.3s ease-in-out forwards; /* Trigger animation on hover */
-    }
-  }
-
 
 }
 
@@ -213,8 +208,8 @@ header, main, footer {
 }
 
 @keyframes underline-hover {
-  from { width: 0; }
-  to { width: 100%; }
+  from { width: 9vw; }
+  to { width: 8vw; }
 }
 
 @media screen and (max-width: 1700px) {
