@@ -1,6 +1,6 @@
 svg {
-  width: 150vw;
-  height: 150vh;
+  width: 120vw;
+  height: 190vh;
 }
 
 body {
@@ -212,27 +212,38 @@ header, main, footer {
   to { width: 100%; }
 }
 
-@media screen and (max-width: 1500px) {
-.header-menu.active {
-  top: 0; /* Slide in from left on activation */
-  right: -20vw;
-  opacity: 1;
+@media screen and (max-width: 1700px) {
+  .header-menu.active {
+    top: 0; /* Slide in from left on activation */
+    right: -20vw;
+    opacity: 1;
   }
-.footer-menu.active {
-  bottom: 0; /* Slide in from left on activation */
-  opacity: 1;
-  left: 25vw;
+
+  .footer-menu.active {
+    bottom: 0; /* Slide in from left on activation */
+    opacity: 1;
+    left: 25vw;
+  }
 }
 
+@media screen and (max-width: 1500px) {
+  svg {
+    width: 145vw;
+    height: 245vh;
+  }
 }
+
+@media screen and (max-width: 1200px) {
+
+}
+
 @media screen and (max-width: 768px) {
-  
-  .hamburger-menu {
-    display: none; /* This rule might be hiding the menu */
+  svg {
+    width: 135vw;
+    height: 125vh;
   }
 
   .header-menu {
-    /* Existing styles... */
     width: 100%; /* Set full width for column layout */
     flex-direction: column; /* Arrange links vertically */
     /* Adjust padding and margins for better spacing (optional) */
