@@ -36,7 +36,7 @@ header, footer {
   align-items: center;
   justify-content: space-between;
   position: fixed;
-  width: 95vw;
+  width: 90vw;
   height: 5vh;
   padding: 2rem 3rem;
   text-align: center;
@@ -214,13 +214,13 @@ header, main, footer {
 
 @media screen and (max-width: 1700px) {
   .header-menu.active {
-    top: 0; /* Slide in from left on activation */
+    top: 0; 
     right: -20vw;
     opacity: 1;
   }
 
   .footer-menu.active {
-    bottom: 0; /* Slide in from left on activation */
+    bottom: 0;
     opacity: 1;
     left: 25vw;
   }
@@ -233,20 +233,64 @@ header, main, footer {
   }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 1400px) {
+  .footer-menu.active {
+    display: flex;
+    flex-direction: row;
+    top: 45vh;
+    bottom: 30vh;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    height: 40vh;
+    width: 100vw;
+  }
 
+  .footer-menu ul {
+    flex-direction: column;
+  }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1200px) {
+  .header-menu.active {
+    display: flex;
+    flex-direction: row;
+    top: 20vh;
+    left: 45vw;
+    right: 0;
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+  }
+
+  .header-menu ul {
+    flex-direction: column;
+  }
+
+  .header-menu ul {
+    flex-wrap: unset; /* Don't wrap links on smaller screens */
+  }
+}
+
+@media screen and (max-width: 850px) {
   svg {
     width: 135vw;
     height: 125vh;
   }
+  
+  .header-menu.active {
+    display: flex;
+    flex-direction: row;
+    top: 20vh;
+    left: 30vw;
+    right: 0;
+    opacity: 1;
+    height: 100vh;
+    width: 100vw;
+  }
 
-  .header-menu {
-    width: 100%; /* Set full width for column layout */
-    flex-direction: column; /* Arrange links vertically */
-    /* Adjust padding and margins for better spacing (optional) */
+  .header-menu ul {
+    flex-direction: column;
   }
 
   .header-menu ul {
