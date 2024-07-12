@@ -16,6 +16,6 @@ See my site for https://david.declared.space
 
 **Experience:**
 
-* [https://david.declared.space/experience]
+* [https://david.declared.space/archive/v1/dvm-resume.pdf]
 
 **So Long and Thanks for All the Fish.**
