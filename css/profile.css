@@ -1,0 +1,46 @@
+.profile {
+  grid-area: profile;
+}
+
+img {
+  height: 45vw;
+  width: 55vh;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (min-width: 2001px) {
+  .profile {
+    text-align: center;
+    height: 40vh;
+    width: 35vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .profile {
+    width: 50vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .profile {
+    width: 40vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .profile {
+    width: 45vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile {
+    width: 95vw;
+    text-align: center;
+  }
+}

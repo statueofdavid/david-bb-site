@@ -1,0 +1,34 @@
+.poweredby {
+  grid-area: poweredby;
+  width: 100%;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+}
+
+.header-poweredby {
+  margin: 1em 0 auto 0;
+}
+
+.copyright-brand {
+  text-align: center; 
+  text-decoration: none;
+  margin: 1em 0 auto 0;
+}
+
+@media (max-width: 1300px) {
+  .poweredby {
+    width: 45vw;
+  }
+}
+
+@media (max-width: 1050px) {
+  .poweredby {
+    width: 40vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .poweredby {
+    width: 95vw;
+  }
+}
