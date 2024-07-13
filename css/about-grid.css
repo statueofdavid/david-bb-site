@@ -1,6 +1,8 @@
-about-grid {
+.about-grid {
   display: grid;
-  grid-gap: 1px;
+  grid-gap: 0;
   grid-template-areas:
-    'profile about';
+    'profile about'
+    'profile buymecoffee'
+    'profile shareidea';
 }

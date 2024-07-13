@@ -1,0 +1,6 @@
+.buymecoffee {
+  height: 25vh;
+  width: 40vw;
+  grid-area: buymecoffee;
+  font-size: 38px;
+}

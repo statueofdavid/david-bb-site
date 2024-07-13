@@ -9,6 +9,7 @@ a {
 }
 
 main {
+  height: 75vh;
   flex: 1;
   grid-area: main;
 }
@@ -27,10 +28,6 @@ footer {
   padding: 2rem 3rem;
   text-align: center;
   color: black;
-}
-
-main, footer {
-  grid-area: auto;  /* Initially set all to auto for clarity */
 }
 
 .footer-menu {
