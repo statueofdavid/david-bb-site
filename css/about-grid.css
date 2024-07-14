@@ -3,5 +3,6 @@
   grid-gap: 0;
   grid-template-areas:
     'profile'
-    'about';
+    'about'
+    'professional';
 }

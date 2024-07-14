@@ -77,9 +77,9 @@ header {
   &:hover {
     text-align: center;
     color: #7f65d6;
+    border-radius: 50px;
+
     background-color: #c49520; /* Underline color (matches hover color) */
-    transition: width 0.3s ease-in-out; /* Animation duration and timing */
-    animation: underline-hover 0.7s ease-in-out forwards; /* Trigger animation on hover */
   }
 }
 
@@ -87,11 +87,6 @@ header {
   text-decoration: none;
   color: black;
 
-}
-
-@keyframes underline-hover {
-  from { width: 13vw; }
-  to { width: 16vw; }
 }
 
 @media screen and (max-width: 1700px) {

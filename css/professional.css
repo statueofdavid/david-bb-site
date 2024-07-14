@@ -1,6 +1,9 @@
-.about {
-  margin: 0% 10% 10% 5%;
-  grid-area: about;
+.professional {
+  position: relative;
+  left: 35vw;
+  bottom: 7vh;
+  margin: 0 0 10% 0;
+  grid-area: professional;
   border: 2px solid #7D12FF;
   border-radius: 10px;
   padding: 5px;
@@ -8,49 +11,50 @@
 }
 
 @media (min-width: 2001px) {
-  .about {
-    margin: 10% 10% 10% 5%;
+  .professional {
     height: 25vh;
     width: 30vw;
   }
 }
 
 @media (max-width: 2000px) {
-  .about {
+  .professional {
+    left: 30vw;
     width: 40vw;
   }
 }
 
 @media (max-width: 1300px) {
-  .about {
-    margin: 0 10% 10% 25%;
-    font-size: 28px;
+  .professional {
     width: 45vw;
+    left: 10vw;
+    font-size: 28px;
   }
 }
 
 @media (max-width: 1050px) {
-  .about {
-    width: 85vw;
-    height: 25vh;
-    margin: 5% 0 10% 5%;
+  .professional {
+    width: 75vw;
+    height: 22vh;
+    margin: 10% 0 0 0;
+    left: 20vw;
   }
 }
 
 @media (max-width: 800px) {
-  .about {
+  .professional {
     width: 92vw;
-    height: 25vh;
+    height: 22vh;
     font-size: 24px;
-    margin: 0 0 5% 0;
+    margin: 10% 0 0 0;
+    left: 0;
   }
 }
 
 @media (max-width: 500px) {
-  .about {
+  .professional {
     width: 92vw;
-    font-size: 18px;
-    margin: 0 0 10% 0;
+  font-size: 18px;
   }
 }
 

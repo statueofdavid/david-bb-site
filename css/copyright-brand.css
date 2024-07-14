@@ -2,5 +2,8 @@
   .copyright-brand {
     background-color: white;
     border-color: black;
+    border-solid: solid 5px;
+    border-radius: 3px;
+    box-shadow: 5px 10px #000000;
   }
 }
