@@ -17,9 +17,6 @@
  **/
 
 const footer = document.querySelector('footer');
-const greyMatterPath = document.getElementById('grey-matter');
-const greyMatterSvg = greyMatterPath.getAttribute('d');
-
 const header = document.querySelector('header');
 
 const hamburgerMenu = document.querySelector('.hamburger-menu');
@@ -27,32 +24,6 @@ const headerNavigationMenu = document.querySelector('.header-menu');
 
 const followerMenu = document.querySelector('.follow-me');
 const footerNavigationMenu = document.querySelector('.footer-menu');
-
-const modal = document.getElementById('modal');
-const modalHeader = document.getElementById('modal-header');
-const modalText = document.getElementById("modal-text");
-
-// Adjusts the brain size as viewport is adjusted
-function centerSVG() {
-  const svgWidth = greyMatterPath.clientWidth;
-  const svgHeight = greyMatterPath.clientHeight;
-
-  const viewportWidth = window.innerWidth;
-  const viewportHeight = window.innerHeight;
-
-  const svgCenterX = svgWidth / 2;
-  const svgCenterY = svgHeight / 2;
-  const viewportCenterX = viewportWidth / 2;
-  const viewportCenterY = viewportHeight / 2;
-
-  greyMatterPath.style.position = "absolute"; // Make sure SVG is positioned
-  greyMatterPath.style.top = `${viewportCenterY - svgCenterY}px`;
-  greyMatterPath.style.left = `${viewportCenterX - svgCenterX}px`;
-};
-
-// Call the function once initially to center the SVG on page load
-window.addEventListener("load", centerSVG);
-window.addEventListener("resize", centerSVG);
 
 //Menu Behavior
 hamburgerMenu.addEventListener('click', () => {
@@ -62,25 +33,3 @@ hamburgerMenu.addEventListener('click', () => {
 followerMenu.addEventListener('click', () => {
   footerNavigationMenu.classList.toggle('active');
 });
-
-// Brain Outline Behavior
-greyMatterPath.addEventListener("click", function() {
-  console.log("clicked"); 
-  console.log(`SVG d string: ${greyMatterSvg}`);
-  showModal();
-});
-
-/* helper functions */
-// overlays the modal over header,main,footer
-function showModal() {
-  modalHeader.innerHTML = `This is my Brain on the Internet`;
-  modalText.innerHTML += `You clicked!`;
-  modal.style.display = "block";
-  modal.style.zIndex = 1;
-}
-
-// removes the modal
-function closeModal() {
-  modal.style.display = "none"; // Hide modal
-  modalText.innerHTML = "";
-}

@@ -1,0 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow:scroll;
+  justify-items: center;
+  display: grid;
+  grid-gap: 1px;
+  grid-template-areas:
+      'header'
+      'main'
+      'footer';
+}
+
+ul {list-style-type: none;}

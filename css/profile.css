@@ -1,0 +1,59 @@
+.profile {
+  grid-area: profile;
+  align-items: center;
+}
+
+img {
+  height: 75vh;
+  width: 55vw;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+@media (min-width: 2001px) {
+  .profile {
+    text-align: center;
+    height: 75vh;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 2000px) {
+  .profile {
+    margin: 5% 10% 10% 0;
+    width: 80vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1300px) {
+  .profile {
+    width: 80vw;
+    text-align: center;
+  }
+}
+
+@media (max-width: 1050px) {
+  .profile {
+    width: 100vw;
+    text-align: center;
+  }
+
+  img {
+    margin: 0;
+    width:80vw;
+  }
+}
+
+@media (max-width: 500px) {
+  .profile {
+    width: 95vw;
+    height: 45vh;
+    text-align: center;
+  }
+
+  img {
+    width: 75vw;
+    height: 45vh;
+  }
+}
