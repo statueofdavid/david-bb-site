@@ -35,14 +35,25 @@ img {
 
 @media (max-width: 1050px) {
   .profile {
-    width: 45vw;
+    width: 100vw;
     text-align: center;
+  }
+
+  img {
+    margin: 0;
+    width:80vw;
   }
 }
 
 @media (max-width: 500px) {
   .profile {
     width: 95vw;
+    height: 45vh;
     text-align: center;
+  }
+
+  img {
+    width: 75vw;
+    height: 45vh;
   }
 }

@@ -45,7 +45,7 @@ footer {
 .footer-menu.active {
   bottom: 0; /* Slide in from left on activation */
   opacity: 1;
-  left: 15vw;
+  left: 8vw;
 }
 
 .footer-menu ul {
@@ -84,21 +84,6 @@ footer {
 
 @media screen and (max-width: 1700px) {
   .footer-menu.active {
-    bottom: 0;
-    opacity: 1;
-    left: 25vw;
-  }
-}
-
-@media screen and (max-width: 1500px) {
-  svg {
-    width: 145vw;
-    height: 245vh;
-  }
-}
-
-@media screen and (max-width: 1400px) {
-  .footer-menu.active {
     display: flex;
     flex-direction: row;
     bottom: 10vh;
@@ -114,15 +99,40 @@ footer {
   }
 }
 
+@media screen and (max-width: 1500px) {
+  svg {
+    width: 145vw;
+    height: 245vh;
+  }
+}
 
-@media screen and (max-width: 850px) {
+
+
+@media screen and (max-width: 1300px) {
   svg {
     width: 135vw;
     height: 135vh;
   }
 
   footer{
-    right: 10vw;
+    width: 80vw;
+  }
+
+  .footer-menu.active {
+    background-color: rgba(127, 101, 214, 0.8); 
+    height: 25vh;
     width: 100vw;
+  }
+
+  .footer-menu a {
+    color: white;
+    background-color: rgba(127, 101, 214, 1); 
+    border-radius: 5px;
+  }
+}
+
+@media screen and (max-height: 700px) {
+  .footer-menu.active {
+    height: 30vh;
   }
 }
