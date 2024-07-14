@@ -2,7 +2,6 @@
   display: grid;
   grid-gap: 0;
   grid-template-areas:
-    'profile about'
-    'profile buymecoffee'
-    'profile shareidea';
+    'profile'
+    'about';
 }

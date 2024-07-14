@@ -27,6 +27,7 @@ header {
   cursor: pointer;
   display: flex;
   flex-direction: column;
+  align-items: left;
   justify-content: space-between;
   width: 30px;
   height: 30px;
@@ -41,13 +42,9 @@ header {
 }
 
 .hamburger-menu.active {
-  /* Existing styles... */
-  /* Add a transform animation (optional) */
   transform: rotate(90deg); /* Example rotation animation */
   transition: transform 0.3s ease-in-out; /* Animation duration and timing */
 }
-
-/* START: all styling in header, footer */
 
 .header-menu {
   position: fixed;
@@ -92,14 +89,14 @@ header {
 }
 
 @keyframes underline-hover {
-  from { width: 9vw; }
-  to { width: 8vw; }
+  from { width: 13vw; }
+  to { width: 16vw; }
 }
 
 @media screen and (max-width: 1700px) {
   .header-menu.active {
     top: 0; 
-    right: -20vw;
+    right: -5vw;
     opacity: 1;
   }
 }
@@ -109,7 +106,7 @@ header {
     display: flex;
     flex-direction: row;
     top: 20vh;
-    left: 45vw;
+    left: 77vw;
     right: 0;
     opacity: 1;
     height: 100vh;

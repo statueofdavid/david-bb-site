@@ -1,10 +1,11 @@
 .profile {
   grid-area: profile;
+  align-items: center;
 }
 
 img {
   height: 75vh;
-  width: 35vw;
+  width: 55vw;
   object-fit: cover;
   border-radius: 10px;
 }
@@ -13,21 +14,21 @@ img {
   .profile {
     text-align: center;
     height: 75vh;
-    width: 55vw;
+    width: 80vw;
   }
 }
 
 @media (max-width: 2000px) {
   .profile {
-    margin: 10% 0 10% 0;
-    width: 55vw;
+    margin: 5% 10% 10% 0;
+    width: 80vw;
     text-align: center;
   }
 }
 
 @media (max-width: 1300px) {
   .profile {
-    width: 40vw;
+    width: 80vw;
     text-align: center;
   }
 }
