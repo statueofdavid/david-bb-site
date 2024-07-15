@@ -47,13 +47,16 @@ img {
 
 @media (max-width: 500px) {
   .profile {
+    margin: 5% 0 0 1%;
     width: 95vw;
-    height: 45vh;
+    height: 95vh;
+    align-items: center;
     text-align: center;
   }
 
   img {
     width: 75vw;
-    height: 45vh;
+    height: 70vh;
   }
+
 }

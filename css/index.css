@@ -1,8 +1,3 @@
-svg {
-  width: 100vw;
-  height: 100vh;
-}
-
 a {
   text-decoration: none;
   color: black;
@@ -10,7 +5,7 @@ a {
 
 main {
   height: 75vh;
-  width: 150vw;
+  width: 100vw;
   flex: 1;
   grid-area: main;
 }
@@ -135,5 +130,11 @@ footer {
 @media screen and (max-height: 700px) {
   .footer-menu.active {
     height: 30vh;
+  }
+}
+
+@media screen and (max-height: 500px) {
+  .footer-menu.active {
+    height: 60vh;
   }
 }
