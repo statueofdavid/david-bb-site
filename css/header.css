@@ -113,7 +113,8 @@ header {
 @media screen and (max-width: 1300px) {
   header {
     top: 1vh;
-    width: 70vw;
+    left: 3vw;
+    width: 100vw;
   }
 
   .header-menu.active {
@@ -124,8 +125,8 @@ header {
     top: 0;
     left: 0;
     opacity: 1;
-    height: 100vh;
-    width: 100vw;
+    height: 150vh;
+    width: 150vw;
   }
 
   .header-menu ul {
