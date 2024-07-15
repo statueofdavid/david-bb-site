@@ -8,6 +8,7 @@ main {
   width: 100vw;
   flex: 1;
   grid-area: main;
+  z-index: 0;
 }
 
 
@@ -24,6 +25,7 @@ footer {
   padding: 2rem 3rem;
   text-align: center;
   color: black;
+  z-index: 10;
 }
 
 .footer-menu {
@@ -41,7 +43,7 @@ footer {
 .footer-menu.active {
   bottom: 0; /* Slide in from left on activation */
   opacity: 1;
-  left: 8vw;
+  left: 16vw;
 }
 
 .footer-menu ul {
@@ -53,7 +55,7 @@ footer {
 }
 
 .footer-menu li {
-  padding: 1rem 2rem;
+  padding: 0.75rem 1.5rem;
 }
 
 .footer-menu a {
@@ -78,7 +80,7 @@ footer {
   to { width: 8vw; }
 }
 
-@media screen and (max-width: 1700px) {
+@media screen and (max-width: 1880px) {
   .footer-menu.active {
     display: flex;
     flex-direction: row;
@@ -86,7 +88,7 @@ footer {
     left: 0;
     right: 0;
     opacity: 1;
-    height: 45vh;
+    height: 25vh;
     width: 65vw;
   }
 
@@ -97,8 +99,7 @@ footer {
 
 @media screen and (max-width: 1500px) {
   svg {
-    width: 145vw;
-    height: 245vh;
+    width: 100vw;
   }
 }
 
@@ -106,18 +107,18 @@ footer {
 
 @media screen and (max-width: 1300px) {
   svg {
-    width: 135vw;
-    height: 135vh;
+    width: 90vw;
+    height: 30vh;
   }
 
   footer{
-    width: 80vw;
+    width: 92vw;
   }
 
   .footer-menu.active {
     background-color: rgba(127, 101, 214, 0.8); 
-    height: 50vh;
-    width: 150vw;
+    height: 70vh;
+    width: 35vw;
   }
 
   .footer-menu a {
@@ -127,14 +128,10 @@ footer {
   }
 }
 
-@media screen and (max-height: 700px) {
+@media screen and (max-width: 700px) {
   .footer-menu.active {
     height: 30vh;
-  }
-}
-
-@media screen and (max-height: 500px) {
-  .footer-menu.active {
-    height: 60vh;
+    width: 100vw;
+    font-size: 16px;
   }
 }

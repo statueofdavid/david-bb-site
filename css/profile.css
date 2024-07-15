@@ -14,21 +14,18 @@ img {
   .profile {
     text-align: center;
     height: 75vh;
-    width: 80vw;
+    width: 100vw;
   }
 }
 
 @media (max-width: 2000px) {
   .profile {
-    margin: 5% 10% 10% 0;
-    width: 80vw;
     text-align: center;
   }
 }
 
 @media (max-width: 1300px) {
   .profile {
-    width: 80vw;
     text-align: center;
   }
 }
