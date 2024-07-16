@@ -1,53 +1,54 @@
-.about {
-  grid-area: about;
+.final {
+  grid-area: final;
   border: 2px solid #7D12FF;
   border-radius: 10px;
+  padding: 5px;
   font-size: 30px;
 }
 
 @media (min-width: 2001px) {
-  .about {
-    height: 25vh;
+  .final {
+    height: 20vh;
     width: 30vw;
   }
 }
 
 @media (max-width: 2000px) {
-  .about {
+  .final {
     width: 40vw;
-    margin: 10% 0 0 45%;
+    margin: 0 0 0 44%;
   }
 }
 
 @media (max-width: 1300px) {
-  .about {
+  .final {
+    width: 45vw;
     font-size: 28px;
-    width: 55vw;
-    margin: 10% 0 0 18%;
+    margin: 0 0 0 18%;
   }
 }
 
 @media (max-width: 1050px) {
-  .about {
+  .final {
+    height: 20vh;
     width: 75vw;
-    height: 37vh;
-    margin: 10% 0 0 14%;
+    margin: 0 0 0 14%;
   }
 }
 
 @media (max-width: 800px) {
-  .about {
+  .final {
+    height: 16vh;
     width: 92vw;
-    height: 38vh;
     font-size: 24px;
   }
 }
 
 @media (max-width: 500px) {
-  .about {
+  .final {
+    height: 13vh;
     width: 85vw;
-    height: 28vh;
-    font-size: 16px;
+    font-size: 14px;
     margin: 0 0 0 8%;
   }
 }

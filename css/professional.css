@@ -1,12 +1,8 @@
 .professional {
   position: relative;
-  left: 35vw;
-  bottom: 7vh;
-  margin: 0 0 10% 0;
   grid-area: professional;
   border: 2px solid #7D12FF;
   border-radius: 10px;
-  padding: 5px;
   font-size: 30px;
 }
 
@@ -19,42 +15,41 @@
 
 @media (max-width: 2000px) {
   .professional {
-    left: 20vw;
     width: 40vw;
+    margin: 0 0 0 13%;
   }
 }
 
 @media (max-width: 1300px) {
   .professional {
     width: 45vw;
-    left: 10vw;
     font-size: 28px;
+    margin: 0 0 0 13%;
   }
 }
 
 @media (max-width: 1050px) {
   .professional {
     width: 75vw;
-    height: 22vh;
-    margin: 10% 0 0 0;
-    left: 20vw;
+    height: 33vh;
+    margin: 0 0 0 14%;
   }
 }
 
 @media (max-width: 800px) {
   .professional {
     width: 92vw;
-    height: 22vh;
+    height: 30vh;
     font-size: 24px;
-    margin: 10% 0 0 0;
-    left: 0;
   }
 }
 
 @media (max-width: 500px) {
   .professional {
-    width: 92vw;
-  font-size: 18px;
+    width: 85vw;
+    height: 25vh;
+    font-size: 16px;
+    margin: 0 0 0 8%;
   }
 }
 
