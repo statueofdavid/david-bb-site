@@ -12,7 +12,11 @@ header {
   text-align: center;
   color: black;
   grid-area: auto;  /* Initially set all to auto for clarity */
-  z-index: 5;
+  z-index: 25;
+}
+
+.vanity {
+  z-index: 30;
 }
 
 .vanity:hover {
@@ -115,7 +119,7 @@ header {
   header {
     top: 1vh;
     left: 3vw;
-    width: 70vw;
+    width: 90vw;
   }
 
   .header-menu.active {

@@ -72,7 +72,7 @@ footer {
   background: none;
   border: none;
   cursor: pointer;
-  z-index: 11;
+  z-index: 30;
 }
 
 @keyframes underline-hover {
