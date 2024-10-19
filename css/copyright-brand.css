@@ -1,9 +1,19 @@
 @media (max-width: 1300px) {
   .copyright-brand {
-    background-color: white;
-    border-color: black;
-    border-solid: solid 5px;
+    background-color: #7f65d6;
+    border: solid 1px #7f65d6;
     border-radius: 3px;
     box-shadow: 5px 10px #000000;
+    padding: 0.45em;
+    z-index: 30;
+  }
+
+  .copyright-brand:hover {
+    font-weight: 900;
+    border: solid 1px #7f65d6;
+    border-radius: 3px;
+    box-shadow: 1px 3px #000000;
+    transition: 0.4s;
   }
 }
+

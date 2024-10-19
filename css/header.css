@@ -17,12 +17,13 @@ header {
 
 .vanity {
   z-index: 30;
-}
+  padding: 1rem 2rem;
+  transition: 0.3s;
 
-.vanity:hover {
-  background-color: #c49520; /* Underline color (matches hover color) */
-  transition: width 0.3s ease-in-out; /* Animation duration and timing */
-  animation: underline-hover 0.7s ease-in-out forwards; /* Trigger animation on hover */
+  &:hover {
+    border-radius: 10px;
+    background-color: #c49520; /* Underline color (matches hover color) */
+  }
 }
 
 .hamburger-menu {
@@ -59,7 +60,7 @@ header {
   opacity: 0;
   background-color: transparent;
   transition: opacity 0.7s ease-in-out;
-  z-index: 25; /* Ensure menu is below header but above content */
+  z-index: 14; /* Ensure menu is below header but above content */
 }
 
 .header-menu.active {
@@ -74,23 +75,31 @@ header {
   margin: 0;
   display: flex;
   flex-wrap: wrap;
+  z-index: 15;
 }
 
 .header-menu li {
   padding: 1rem 2rem;
-
+  transition: 0.7s;
+  z-index: 16;
+  
   &:hover {
     text-align: center;
-    color: #7f65d6;
-    border-radius: 50px;
-
-    background-color: #c49520; /* Underline color (matches hover color) */
+    border-radius: 10px;
+    background-color: #7f65d6; /* Underline color (matches hover color) */
   }
 }
 
 .header-menu a {
   text-decoration: none;
   color: black;
+  transition: 0.3s;
+  z-index: 17;
+  
+  &:hover {
+    font-weight: 900;
+    color: #c49520;
+  }
 
 }
 
@@ -145,3 +154,10 @@ header {
     flex-wrap: unset; /* Don't wrap links on smaller screens */
   }
 }
+
+@media screen and (max-width: 950px) {
+  header {
+    top: 1vh;
+    left: 3vw;
+    width: 80vw;
+  }
