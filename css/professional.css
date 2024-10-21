@@ -11,46 +11,48 @@
   .professional {
     height: 25vh;
     width: 30vw;
+    margin: 0 0 0 35vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 2000px) {
   .professional {
     width: 40vw;
-    margin: 0 0 0 13%;
+    margin: 0 0 0 15vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 1300px) {
   .professional {
-    width: 45vw;
     font-size: 28px;
-    margin: 0 0 0 13%;
+    padding: 1.5rem;
+    width: 52vw;
+    margin: 0 0 0 22vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 1050px) {
   .professional {
-    width: 75vw;
-    height: 33vh;
-    margin: 0 0 0 14%;
+    margin: 0 0 0 20vw;
+    transition 1s;
   }
 }
 
 @media (max-width: 800px) {
   .professional {
-    width: 92vw;
-    height: 30vh;
+    width: 65%;
+    margin: 1rem 1rem 1rem 3rem;
+    padding: 5rem 5rem;
     font-size: 24px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .professional {
-    width: 85vw;
-    height: 25vh;
-    font-size: 16px;
-    margin: 0 0 0 8%;
+    width: 45%;
   }
 }
 

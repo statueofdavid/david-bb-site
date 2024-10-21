@@ -10,46 +10,48 @@
   .final {
     height: 20vh;
     width: 30vw;
+    margin: 0 0 0 15vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 2000px) {
   .final {
     width: 40vw;
-    margin: 0 0 0 44%;
+    margin: 0 0 0 25vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 1300px) {
   .final {
-    width: 45vw;
     font-size: 28px;
-    margin: 0 0 0 18%;
+    padding: 1.5rem;
+    width: 52vw;
+    margin: 0 0 0 22vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 1050px) {
   .final {
-    height: 20vh;
-    width: 75vw;
-    margin: 0 0 0 14%;
+    margin: 0 0 0 20vw;
+    transition 1s;
   }
 }
 
 @media (max-width: 800px) {
   .final {
-    height: 16vh;
-    width: 92vw;
+    width: 65%;
+    margin: 1rem;
+    padding: 5rem 5rem;
     font-size: 24px;
   }
 }
 
 @media (max-width: 500px) {
   .final {
-    height: 13vh;
-    width: 85vw;
-    font-size: 14px;
-    margin: 0 0 0 8%;
+    width: 45%;
   }
 }
 

@@ -4,52 +4,55 @@
   border-radius: 10px;
   font-size: 30px;
   padding: 10%;
+  align-items: center;
 }
 
 @media (min-width: 2001px) {
   .about {
     height: 25vh;
     width: 30vw;
+    margin: 0 0 0 15vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 2000px) {
   .about {
     width: 40vw;
-    margin: 10% 0 0 45%;
+    margin: 0 0 0 25vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 1300px) {
   .about {
     font-size: 28px;
-    width: 55vw;
-    margin: 10% 0 0 18%;
+    padding: 1.5rem;
+    width: 52vw;
+    margin: 0 0 0 22vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 1050px) {
   .about {
-    width: 75vw;
-    height: 37vh;
-    margin: 10% 0 0 14%;
+    margin: 0 0 0 20vw;
+    transition: 1s;
   }
 }
 
 @media (max-width: 800px) {
   .about {
-    width: 92vw;
-    height: 38vh;
+    width: 65%;
+    margin: 1rem;
+    padding: 5rem 5rem;
     font-size: 24px;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
   .about {
-    width: 85vw;
-    height: 28vh;
-    font-size: 16px;
-    margin: 0 0 0 8%;
+    width: 45%;
   }
 }
 

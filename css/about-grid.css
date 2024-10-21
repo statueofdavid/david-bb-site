@@ -1,6 +1,6 @@
 .about-grid {
   display: grid;
-  grid-gap: 0;
+  grid-gap: 5em;
   grid-template-areas:
     'profile'
     'about'
