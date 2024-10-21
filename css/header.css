@@ -153,6 +153,21 @@ header {
     width: 80vw;
   }
   
+  .vanity {
+    background-color: #c49520; /* Underline color (matches hover color) */
+    box-shadow: 7px 12px #000000;
+    z-index: 30;
+    padding: 1rem 2rem;
+    transition: 1.2s;
+
+    &:hover {
+      border-radius: 10px;
+      background-color: #c49520; /* Underline color (matches hover color) */
+      box-shadow: 1px 3px #000000;
+      transition: 0.7s;
+    }
+  }
+
   .header-menu.active {
     width: 100vw;
   }
