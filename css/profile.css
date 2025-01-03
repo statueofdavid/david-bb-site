@@ -1,4 +1,5 @@
 .profile {
+  height: 75vh;
   grid-area: profile;
   align-items: center;
 }
