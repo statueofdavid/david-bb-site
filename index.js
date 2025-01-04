@@ -7,6 +7,7 @@ let selectedElement = null;
 let initialX, initialY;
 let offsetX, offsetY;
 
+/* menu behavior  */
 document.addEventListener('DOMContentLoaded', () => {
   const footer = document.querySelector('footer');
   const header = document.querySelector('header');
@@ -17,7 +18,6 @@ document.addEventListener('DOMContentLoaded', () => {
   const followerMenu = document.querySelector('.follow-me');
   const footerNavigationMenu = document.querySelector('.footer-menu');
 
-  //Menu Behavior
   hamburgerMenu.addEventListener('click', () => {
     headerNavigationMenu.classList.toggle('active');
     footerNavigationMenu.classList.remove('active');
@@ -31,8 +31,9 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+/* drag-drop behavior */
 if(svg != undefined) {  
-  originalPositions = storeInitialPositions(); 
+  originalPositions = storeInitialPositions();
   setTimeout(scatterRegions, 2000); 
   
   regions.forEach(region => {
@@ -46,6 +47,7 @@ if(svg != undefined) {
   document.addEventListener('mouseup', endDrag);
   document.addEventListener('touchend', endDrag);
 }
+
 
 function storeInitialPositions() {
     const initialPositions = {}; // Object to store initial positions
@@ -61,25 +63,31 @@ function storeInitialPositions() {
     };
   });
 
+  console.log(`start positions for each brain section: ${JSON.stringify(initialPositions)}`);
   return initialPositions;
 }
 
 function scatterRegions() {
-  const containerRect = svg.getBBox();
-  
-  regions.forEach(region => {
-    const regionRect = region.getBBox();
+  const containerRect = svg.getBoundingClientRect();
+  console.log(`board size dimensions: ${JSON.stringify(containerRect.height)}, ${JSON.stringify(containerRect.width)}`);
 
-    const maxX = containerRect.width - (regionRect.width * (containerRect.width / 990));
+  regions.forEach(region => {
+    console.log(`scattering: ${region.id}`);
+    const regionRect = region.getBoundingClientRect();
+    const regionBounds = region.getBBox();
+    console.log(`region box dimensions: ${JSON.stringify(regionRect.height)}, ${JSON.stringify(regionRect.width)}`);
+
+    const maxX = containerRect.width;
     let randomX = Math.random() * maxX;
 
-    const maxY = containerRect.height - (regionRect.height * (containerRect.height / 1050));
+    const maxY = containerRect.height;
     let randomY = Math.random() * maxY;
-    region.style.transform = `translate(${randomX / 100}px, ${maxY / 100}px)`;
 
-    const centerX = regionRect.x + (regionRect.width / 2); 
-    const centerY = regionRect.y + (regionRect.height / 2);
-    
+    region.style.transform = `translate(${randomX / 15}px, ${maxY / 2}px)`;
+
+    const centerX = regionBounds.x + (regionBounds.width / 2);
+    const centerY = regionBounds.y + (regionBounds.height / 2);
+
     setTimeout(() => {
       const randomRotation = (Math.random() * 1440) - 720;
       region.style.transform += `rotate(${randomRotation}deg)`;
@@ -103,90 +111,9 @@ function startDrag(event) {
 
 function drag(event) {
   if (!selectedElement) return;
-
-  const containerRect = svg.getBoundingClientRect();
-  const regionRect = selectedElement.getBoundingClientRect();
-
-  const maxX = window.innerWidth - regionRect.width;
-  const maxY = window.innerHeight - regionRect.height;
-
-  let x = (event.clientX || event.touches[0].clientX) - offsetX;
-  let y = (event.clientY || event.touches[0].clientY) - offsetY;
-  
-    console.log("Container Rect:", containerRect);
-    console.log("Region Rect:", regionRect);
-    console.log("maxX:", maxX, "maxY:", maxY);
-    console.log("x:", x, "y:", y);
-
-  x = Math.max(0, Math.min(x, maxX));
-  y = Math.max(0, Math.min(y, maxY));
-
-  selectedElement.style.transform = `translate(${x}px, ${y}px)`;
   event.preventDefault();
 }
 
 function endDrag() {
-      if (selectedElement) {
-        const containerRect = svg.getBoundingClientRect();
-        const regionRect = selectedElement.getBoundingClientRect();
-
-        const maxX = svg.offsetWidth - regionRect.width;
-        const maxY = svg.offsetHeight - regionRect.height;
-
-        let currentX = regionRect.left - containerRect.left;
-        let currentY = regionRect.top - containerRect.top;
-
-        if (currentX < 0 || currentX > maxX || currentY < 0 || currentY > maxY) {
-            const targetX = Math.max(0, Math.min(currentX, maxX));
-            const targetY = Math.max(0, Math.min(currentY, maxY));
-
-            selectedElement.style.transition = "transform 0.2s ease";
-            selectedElement.style.transform = `translate(${targetX}px, ${targetY}px)`;
-
-            selectedElement.addEventListener("transitionend", () => {
-              selectedElement.style.transition = "";
-	      const updatedRegionRect = selectedElement.getBoundingClientRect(); 
-
-                // Adjust position based on the updated regionRect
-                const updatedX = updatedRegionRect.left - containerRect.left;
-                const updatedY = updatedRegionRect.top - containerRect.top;
-                const finalX = Math.max(0, Math.min(updatedX, maxX));
-                const finalY = Math.max(0, Math.min(updatedY, maxY));
-
-		selectedElement.style.transition = "transform 0.1s ease";
-                selectedElement.style.transform = `translate(${finalX}px, ${finalY}px)`;
-            }, { once: true });
-        }
-    }
-
   selectedElement = null;
-  checkPuzzleSolved();
 }
-
-function checkPuzzleSolved() {
-  console.log("checking if puzzle is solved")
-
-  let solved = true;
-
-  regions.forEach(region => {
-    const regionId = region.id;
-    const target = originalPositions[regionId];
-
-    const currentRegionLocation = region.getBBox();
-    const regionX = currentRegionLocation.x;
-    const regionY = currentRegionLocation.y;
-
-    const tolerance = 20; 
-    if (
-      Math.abs(regionX - target.x) > tolerance || 
-      Math.abs(regionY - target.y) > tolerance
-    ) {
-      solved = false;
-      return;
-    }
-  });
-
-  if (solved) {
-  }
-}
-
