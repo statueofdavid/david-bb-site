@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:podcast="https://podcastindex.org/namespace/1.0">
+  <channel>
+    <title>David's Declared Space</title>
+    <description>A space where I speak</description>
+    <link>https://david.declared.space</link>  <atom:link href="https://david.declared.space/podcast.rss" rel="self" type="application/rss+xml" />
+    <language>en-us</language>  <copyright>Copyright 2025 Declared Space</copyright>
+    <pubDate>Sun, 09 Feb 2025 12:00:00 GMT</pubDate> <image>
+      <url>https://david.declared.space/brain_layout.svg</url>  <title>David's Declared Space</title>
+      <link>https://david.declared.space</link>
+    </image>
+  </channel>
+</rss>
