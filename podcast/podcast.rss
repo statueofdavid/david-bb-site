@@ -32,6 +32,10 @@
       <link>https://david.declared.space</link>
       <guid isPermaLink="false">coming-soon</guid>
       <pubDate>Sun, 09 Feb 2025 10:00:00 GMT</pubDate>
+      <enclosure
+	      length="9445801"
+	      type="audio/mpeg"
+	      url="https://david.declared.space/podcast/episodes/teaser_audio_first_time.mp3"/>
     </item>
   </channel>
 </rss>
