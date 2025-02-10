@@ -1,20 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0"
+	xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" 
+	xmlns:content="http://purl.org/rss/1.0/modules/content/"
+	xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>David's Declared Space</title>
     <description>A space where I speak</description>
     <link>https://david.declared.space</link>
-<managingEditor>david@declared.space (David V. Miller)</managingEditor>
-<webMaster>david@declared.space (David V. Miller)</webMaster>
-    <atom:link href="https://david.declared.space/podcast.rss" rel="self" type="application/rss+xml" />
+    <managingEditor>david@declared.space</managingEditor>
+    <webMaster>david@declared.space</webMaster>
+    <atom:link href="https://david.declared.space/podcast.rss" rel="self" type="application/rss+xml"/>
     <language>en-us</language>  
     <copyright>Copyright 2025 Declared Space</copyright>
+    <itunes:author>Declared Space</itunes:author>
     <pubDate>Sun, 09 Feb 2025 12:00:00 GMT</pubDate> 
     <image>
-	    <url>https://david.declared.space/brain_layout.svg</url>  
+	    <url>https://david.declared.space/brain_layout.png</url>  
 	    <title>David's Declared Space</title>
 	    <link>https://david.declared.space</link>
     </image>
+    <itunes:category text="Lifestyle"/>
+    <itunes:explicit>false</itunes:explicit>
     <item>
       <title>Coming Soon!</title>
       <description>My cast is launching soon! Subscribe now to be notified when the first episode is released.</description>
