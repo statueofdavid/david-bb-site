@@ -19,6 +19,10 @@
 	    <title>David's Declared Space</title>
 	    <link>https://david.declared.space</link>
     </image>
+    <itunes:owner>
+      <itunes:name>David V. Miller</itunes:name>
+      <itunes:email>david@declared.space</itunes:email>
+    </itunes:owner>
     <itunes:image href="https://david.declared.space/brain_layout.png"/>
     <itunes:category text="Lifestyle"/>
     <itunes:explicit>false</itunes:explicit>
