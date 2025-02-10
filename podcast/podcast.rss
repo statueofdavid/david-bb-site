@@ -15,7 +15,7 @@
     <itunes:author>Declared Space</itunes:author>
     <pubDate>Sun, 09 Feb 2025 12:00:00 GMT</pubDate> 
     <image>
-	    <url>https://david.declared.space/brain_layout.png</url>  
+	    <url>https://david.declared.space/images/brain_layout.png</url>  
 	    <title>David's Declared Space</title>
 	    <link>https://david.declared.space</link>
     </image>
@@ -23,7 +23,7 @@
       <itunes:name>David V. Miller</itunes:name>
       <itunes:email>david@declared.space</itunes:email>
     </itunes:owner>
-    <itunes:image href="https://david.declared.space/brain_layout.png"/>
+    <itunes:image href="https://david.declared.space/images/brain_layout.png"/>
     <itunes:category text="Lifestyle"/>
     <itunes:explicit>false</itunes:explicit>
     <item>
