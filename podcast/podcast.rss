@@ -1,13 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<rss version="2.0" 
-	xmlns:atom="http://www.w3.org/2005/Atom"
-        xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd"
-        xmlns:googleplay="http://www.google.com/schemas/play-podcasts/1.0"
-	xmlns:podcast="https://podcastindex.org/namespace/1.0">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>David's Declared Space</title>
     <description>A space where I speak</description>
-    <link>https://david.declared.space</link>  
+    <link>https://david.declared.space</link>
+<managingEditor>david@declared.space (David V. Miller)</managingEditor>
+<webMaster>david@declared.space (David V. Miller)</webMaster>
     <atom:link href="https://david.declared.space/podcast.rss" rel="self" type="application/rss+xml" />
     <language>en-us</language>  
     <copyright>Copyright 2025 Declared Space</copyright>
